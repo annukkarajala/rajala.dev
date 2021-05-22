@@ -1,14 +1,20 @@
-# Rajala.dev
+# [Rajala.dev](https://rajala.dev)
 
-My portfolio. Built with Next.js.
+> Personal portfolio. Built with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com). 🚀
+
+
+## Setup
+```
+$ npm install
+```
 
 ## Development
 ```
-# Run in development mode
 $ npm run dev
-
-# Build for production
-$ npm run build
 ```
+Open http://localhost:3000 in your browser.
 
-This portfolio is built from [nextjs-blog](https://nextjs.org/learn).
+
+## Credits
+
+Built from [nextjs-blog](https://nextjs.org/learn).
