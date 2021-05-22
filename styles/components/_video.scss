@@ -1,0 +1,21 @@
+.video {
+  margin: .5rem 0;
+
+  figcaption {
+    margin: 1.5rem 0 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border-radius: $border-radius;
+    overflow: hidden;
+    @include box-shadow;
+  }
+
+  &__player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

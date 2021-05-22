@@ -1,0 +1,21 @@
+.projects > * {
+  padding: 1rem 0 4rem;
+
+  .introduction {
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    @include breakpoint(md) {
+      margin-top: 0;
+    }
+  }
+
+  .diamond {
+    svg {
+      width: 2.3rem;
+    }
+    
+    margin-bottom: .2rem;
+  }
+}

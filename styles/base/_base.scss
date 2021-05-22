@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// Application-wide base styles
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 1.2rem 0 0;
+  text-align: center;
+  color: $grey-dark;
+
+  &::before {
+    content: '↑ ';
+  }
+}
+
+.lazy {
+  &__fadein {
+    opacity: 0;
+    transition: opacity .25s;
+    border-radius: $border-radius;
+  }
+
+  &__loaded {
+    opacity: 1;
+  }
+}
+
+.skeleton {
+  background-color: $bg-dark2;
+  border-radius: $border-radius;
+  transition: color .4s ease;
+}
+
+b {
+  font-weight: 800;
+}

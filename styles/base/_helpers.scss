@@ -1,0 +1,16 @@
+.spacing-bottom {
+  margin-bottom: 2rem;
+
+  @include breakpoint(lg) {
+    margin-bottom: 5rem;
+  }
+}
+
+.separator {
+  padding: 0 .2rem;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}

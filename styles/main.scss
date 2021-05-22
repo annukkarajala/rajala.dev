@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// Vendors
+@import
+  'vendors/normalize';
+
+// Base stuff
+@import
+  'base/base',
+  'base/typography',
+  'base/helpers';
+
+// Layout-related sections
+@import
+  'layout/layout',
+  'layout/navbar',
+  'layout/footer';
+
+// Components
+@import
+  'components/button',
+  'components/video',
+  'components/card',
+  'components/introduction';
+
+// Page-specific styles
+@import
+  'pages/home',
+  'pages/projects',
+  'pages/norma';
