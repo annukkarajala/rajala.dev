@@ -13,27 +13,6 @@ export default function Meta() {
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="theme-color" content="#000" />
       <meta name="description" content="Rajala.dev — Portfolio." />
-      <link
-        rel="preload"
-        href="/fonts/SpaceGrotesk-Regular.ttf"
-        as="font"
-        type="font/ttf"
-        crossOrigin="anonymous"
-      />
-      <link
-        rel="preload"
-        href="/fonts/SpaceGrotesk-Bold.ttf"
-        as="font"
-        type="font/ttf"
-        crossOrigin="anonymous"
-      />
-      <link
-        rel="preload"
-        href="/fonts/SpaceGrotesk-SemiBold.ttf"
-        as="font"
-        type="font/ttf"
-        crossOrigin="anonymous"
-      />
     </Head>
   );
 }

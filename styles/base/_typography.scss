@@ -2,30 +2,6 @@
 // Base level typography related styles
 // -----------------------------------------------------------------------------
 
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: optional;
-}
-
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: optional;
-}
-
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: optional;
-}
-
 $fallback-stack: (
   -apple-system,
   BlinkMacSystemFont,
@@ -91,7 +67,7 @@ h2 {
 
   &.bigger {
     font-size: 2rem;
-    
+
     @include breakpoint(md) {
       font-size: 2.25rem;
     }
