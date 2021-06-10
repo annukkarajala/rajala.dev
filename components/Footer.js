@@ -71,6 +71,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="footer__copyright-separator"></div>
         <div className="footer__copyright">
           <small>&copy; {new Date().getFullYear()} — rajala.dev</small>
         </div>

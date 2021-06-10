@@ -11,7 +11,7 @@ footer {
   &__grid {
     display: grid;
     --padding: 1rem;
-    grid-template-columns: minmax(var(--padding), 1fr) [contain-start] minmax(0, 70rem) [contain-end] minmax(var(--padding), 1fr);
+    grid-template-columns: [full-start] minmax( var(--padding), 1fr) [contain-start] minmax(0, 70rem) [contain-end] minmax(var(--padding), 1fr) [full-end];
 
     > * {
       grid-column: contain;
@@ -38,6 +38,10 @@ footer {
     p {
       margin: 1rem 0 0;
       font-size: 1rem;
+    }
+
+    b {
+      font-size: 1.125rem;
     }
   }
 
@@ -90,10 +94,14 @@ footer {
     margin: 0 0 2rem;
   }
 
-  &__copyright {
-    border-top: 1px solid rgba($grey-dark, 0.3);
-    padding: 1rem 0;
+  &__copyright-separator {
+    grid-column: full;
+    border-top: 1px solid $secondary-vio2;
     margin-top: 2rem;
+  }
+
+  &__copyright {
+    padding: 1rem 0;
 
     small {
       font-size: .975rem;
@@ -106,7 +114,7 @@ footer {
   grid-template-columns: 1fr;
   padding:  0 1rem 1rem;
   margin-top: -2rem;
-  background-color: $bg-dark2;
+  background-color: $bg-accent;
   border-radius: $border-radius;
 
   @include breakpoint(sm) {
@@ -138,7 +146,7 @@ footer {
     > * {
       height: 100%;
       width: 100%;
-      max-width: 24rem;
+      max-width: 22rem;
       margin-top: -0.5rem;
     }
   }

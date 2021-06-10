@@ -10,7 +10,7 @@
   &__bg {
     grid-column: full;
     position: absolute;
-    color: $bg-accent;
+    color: #100f1c;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
@@ -92,7 +92,7 @@
   }
   
   &__profile {
-    background-color: $bg-dark2;
+    background-color: $bg-accent;
     border-radius: $border-radius;
     width: 100%;
     min-width: 18rem;
