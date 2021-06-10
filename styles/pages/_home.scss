@@ -43,7 +43,9 @@
     max-width: 48rem;
 
     @include breakpoint(lg) {
+      max-width: 100%;
       min-width: 32rem;
+      flex: 1 1 0;
     }
 
     h1 {
@@ -67,14 +69,15 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 3.5rem 0.8rem -3.5rem;
+    margin: 3.5rem 0 0;
 
     svg {
       max-width: 24rem;
     }
 
-    @include breakpoint(md) {
-      margin-top: 4rem;
+    @include breakpoint(lg) {
+      justify-content: flex-end;
+      margin: 4rem 1rem 1rem 2rem;
     }
   }
 }
