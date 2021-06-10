@@ -48,11 +48,19 @@ export default function Norma() {
         </h2>
         <div>
           <p>
-            <a href="/" className="link-effect">
+            <a
+              href="https://bonsky.com/"
+              className="link-effect"
+              target="_blank"
+              rel="noopener noreferrer">
               Bonsky Digital Oy
             </a>{' '}
             (liittyi osaksi{' '}
-            <a href="/" className="link-effect">
+            <a
+              href="https://www.vincit.fi/"
+              className="link-effect"
+              target="_blank"
+              rel="noopener noreferrer">
               Vincit Oyj
             </a>
             :tä 1.5.2021) suunnittelee ja toteuttaa mm. sähköisiä asiointi&shy;palveluja,
