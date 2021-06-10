@@ -1,6 +1,6 @@
 import Footer from './Footer';
-import Meta from './meta';
-import Navbar from './navbar';
+import Meta from './Meta';
+import Navbar from './Navbar';
 export const siteTitle = 'Rajala.dev';
 
 export default function Layout({ children }) {

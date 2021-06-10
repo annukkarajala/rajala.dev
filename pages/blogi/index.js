@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import Date from '../../components/date';
-import Layout, { siteTitle } from '../../components/layout';
+import Date from '../../components/Date';
+import Layout, { siteTitle } from '../../components/Layout';
 import { getSortedPostsData } from '../../lib/blog';
 
 export async function getStaticProps() {

@@ -1,7 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
-
-import LazyImage from './lazyImage';
 
 export default function AboutMe() {
   return (

@@ -1,10 +1,9 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
 import AboutMe from '../components/AboutMe';
 import Button from '../components/Button';
 import Introduction from '../components/Introduction';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
 import HandWave from '../svgs/handwave.svg';
 import HeroBg from '../svgs/hero-bg.svg';

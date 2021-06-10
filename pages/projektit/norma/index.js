@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Counter from '../../../components/counter';
-import Layout, { siteTitle } from '../../../components/layout';
-import LazyImage from '../../../components/lazyImage';
-import LazyVideo from '../../../components/lazyVideo';
+import Counter from '../../../components/Counter';
+import Layout, { siteTitle } from '../../../components/Layout';
+import LazyImage from '../../../components/LazyImage';
+import LazyVideo from '../../../components/LazyVideo';
 
 export default function Norma() {
   return (

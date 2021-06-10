@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import Logo from '../svgs/logo.svg';
-import Menu from './menu';
+import Menu from './Menu';
 
 export default function Navbar() {
   const [active, setActive] = useState(false);

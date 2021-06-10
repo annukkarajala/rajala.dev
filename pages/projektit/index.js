@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import Introduction from '../../components/Introduction';
-import Layout, { siteTitle } from '../../components/layout';
+import Layout, { siteTitle } from '../../components/Layout';
 import ProjectCard from '../../components/ProjectCard';
 import Diamond from '../../svgs/icon-diamond.svg';
 

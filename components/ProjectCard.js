@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import IconFigma from '../svgs/icon-figma.svg';
 import IconReact from '../svgs/icon-react.svg';
 import IconSCSS from '../svgs/icon-sass.svg';
-import LazyImage from './lazyImage';
+import LazyImage from './LazyImage';
 
 export default function ProjectCard({ href }) {
   return (
