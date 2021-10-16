@@ -1,15 +1,16 @@
 import Link from 'next/link';
-import Logo from '../svgs/logo.svg';
+import Logo from '../svgs/rajaladev-logo.svg';
 
 export default function Navbar() {
   return (
     <div className="navbar">
-      <Link href="/">
-        <a className="navbar__logo">
-          <Logo width="21" height="23" />
-          <span>Rajala.dev</span>
-        </a>
-      </Link>
+      <div className="navbar__grid">
+        <Link href="/">
+          <a>
+            <Logo width="137" height="24" />
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }
