@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 // HTML structure should be something like this:
-// <article className="content-grid">
+// <div className="content-grid">
 //   <section>
 //     <h2></h2>
 //     <div></div>
@@ -16,7 +16,7 @@
 //     <h2></h2>
 //     <div></div>
 //   </section>
-// </article>
+// </div>
 
 .content-grid {
   display: grid;
@@ -83,6 +83,9 @@
     }
   }
 }
+
+
+// Project details layout
 
 .alternate {
   background-color: $bg-dark;
