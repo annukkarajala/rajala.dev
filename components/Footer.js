@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import Logo from '../svgs/logo.svg';
 import Contact from './Contact';
 
@@ -18,26 +16,6 @@ export default function Footer() {
             </p>
           </div>
           <div className="footer__links">
-            <div className="footer__links-section">
-              <h4>Sivut</h4>
-              <ul>
-                <li>
-                  <Link href="/">
-                    <a>Etusivu</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projektit">
-                    <a>Projektit</a>
-                  </Link>
-                </li>
-                {/* <li>
-                  <Link href="/blogi">
-                    <a>Blogi</a>
-                  </Link>
-                </li> */}
-              </ul>
-            </div>
             <div className="footer__links-section">
               <h4>Linkit</h4>
               <ul>

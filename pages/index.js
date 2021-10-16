@@ -1,15 +1,16 @@
 import Head from 'next/head';
+import Layout, { siteTitle } from '../components/Layout';
 
 import AboutMe from '../components/AboutMe';
-import Button from '../components/Button';
+import Button from '../components/buttons/Button';
 import Introduction from '../components/Introduction';
-import Layout, { siteTitle } from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
+
 import HandWave from '../svgs/handwave.svg';
 import HeroBg from '../svgs/hero-bg.svg';
 import HeroImg from '../svgs/hero-img.svg';
 
-export default function Home() {
+export default function Index() {
   return (
     <Layout>
       <Head>
@@ -38,8 +39,8 @@ export default function Home() {
                   osaamis&shy;alaani ovat React, SCSS ja Figma. Opiskelen kolmatta vuotta Jyväskylän
                   ammatti&shy;korkea&shy;koulussa.
                 </p>
-                <Button href="/projektit" name="Projektit" icon />
-                <Button href="#lisaa-minusta" name="Lisää minusta" type="secondary" />
+                <Button href="" name="Lisää minusta" type="primary" />
+                <Button href="" name="Ota yhteyttä" type="secondary" />
               </div>
             </div>
 
@@ -52,10 +53,7 @@ export default function Home() {
       <section className="content-grid__full alternate">
         <div className="content-grid__contained">
           <h2 className="bigger">Tuorein työnäyte</h2>
-          <ProjectCard href="/projektit/norma" />
-          <div className="justify-center button-container">
-            <Button href="/projektit" name="Kaikki projektit" icon />
-          </div>
+          <ProjectCard href="/norma" />
         </div>
       </section>
       <section id="lisaa-minusta" className="content-grid__full alternate">

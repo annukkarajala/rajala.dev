@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Counter from '../../../components/Counter';
-import Layout, { siteTitle } from '../../../components/Layout';
-import LazyImage from '../../../components/LazyImage';
-import LazyVideo from '../../../components/LazyVideo';
+import CountUpItem from '../components/CountUpItem';
+import Layout, { siteTitle } from '../components/Layout';
+import LazyImage from '../components/LazyImage';
+import LazyVideo from '../components/LazyVideo';
 
 export default function Norma() {
   return (
@@ -181,15 +181,15 @@ export default function Norma() {
           </h2>
           <div className="stats-grid">
             <div>
-              <Counter start={6} end={19} duration={1.75} />
+              <CountUpItem start={6} end={19} duration={1.75} />
               <p>Palaveria toimeksiantajan kanssa</p>
             </div>
             <div>
-              <Counter start={13} end={200} duration={1} suffix="+ h" />
+              <CountUpItem start={13} end={200} duration={1} suffix="+ h" />
               <p>Projektiryhmän Discord-kokoontumisia</p>
             </div>
             <div>
-              <Counter start={29} end={704} duration={0.75} />
+              <CountUpItem start={29} end={704} duration={0.75} />
               <p>Git-committia</p>
             </div>
           </div>

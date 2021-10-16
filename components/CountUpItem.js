@@ -2,7 +2,7 @@ import { useState } from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
-export default function Counter({ start, end, duration, ...props }) {
+export default function CountUpItem({ start, end, duration, ...props }) {
   const [inViewport, setInViewport] = useState(false);
 
   return (
