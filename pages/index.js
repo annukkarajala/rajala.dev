@@ -6,42 +6,44 @@ import ProjectCard from '../components/ProjectCard';
 
 import SvgHandWave from '../svgs/handwave.svg';
 import SvgDevelopment from '../svgs/development.svg';
-import SvgDevelopmentBg from '../svgs/development-bg.svg';
 import SvgContactLetter from '../svgs/contact-letter.svg';
-import SvgContactLetterBg from '../svgs/contact-letter-bg.svg';
 
 export default function Index() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Etusivu · {siteTitle}</title>
       </Head>
       <header className="content-grid__full hero">
-        <div className="hero__bg">
-          <SvgDevelopmentBg />
-        </div>
         <div className="content-grid__contained">
           <div className="hero__flex">
             <div>
-              <SvgHandWave width="40" height="42" />
-              <p>Moikka!</p>
-              <p>Olen Annukka, frontend-kehittäjä</p>
-              <div className="hero__intro">
+              <div className="hero__greeting">
+                <SvgHandWave width="40" height="42" />
+                <p>
+                  Moikka!<br />
+                  Olen Annukka, frontend-kehittäjä
+                </p>
+              </div>
+              <div className="hero__content">
                 <h1>
-                  Koodia ja designia
-                  <br />
+                  Koodia ja designia<br />
                   käsi kädessä
                 </h1>
                 <p>
                   Olen koodari, jolta löytyy myös visuaalista silmää. Etenkin web-käyttöliittymien suunnittelu ja toteutus ovat lähellä sydäntä. Vahvinta osaamistani ovat modernit JavaScript-sovelluskehykset ja CSS.
                 </p>
-                <Button href="" name="Lisää minusta" type="primary" />
-                <Button href="" name="Ota yhteyttä" type="secondary" />
+                <div className="hero__actions">
+                  <Button href="/" name="Lisää minusta" type="primary" />
+                  <Button href="/" name="Ota yhteyttä" type="secondary" />
+                </div>
               </div>
             </div>
 
-            <div className="hero__illustr">
-              <SvgDevelopment />
+            <div className="hero__image">
+              <div className="hero__svg-wrapper">
+                <SvgDevelopment />
+              </div>
             </div>
           </div>
         </div>
@@ -70,8 +72,7 @@ export default function Index() {
       </section>
       <section id="contact" className="content-grid__full">
         <div className="content-grid__contained spacing-bottom">
-          {/* <SvgContactLetter /> */}
-          {/* <SvgContactLetterBg /> */}
+          <SvgContactLetter />
           <h2>Ota yhteyttä</h2>
           <p>Jos haluat jutella, laita postia osoitteeseen <a href="mailto:annukka@rajala.dev">annukka@rajala.dev</a> tai ota yhteyttä <a
             href="https://www.linkedin.com/in/annukkarajala/"

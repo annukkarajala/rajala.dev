@@ -2,7 +2,7 @@ import Meta from './Meta';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-export const siteTitle = 'rajala.dev';
+export const siteTitle = 'Rajala.dev';
 
 export default function Layout({ children }) {
   return (

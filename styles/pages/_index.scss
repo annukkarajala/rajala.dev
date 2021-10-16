@@ -1,66 +1,130 @@
 // -----------------------------------------------------------------------------
-// Index
+// Index styles
 // -----------------------------------------------------------------------------
 
 .hero {
-  padding: 4rem 0 6rem;
+  margin: 3rem 0;
+  padding-bottom: 2.25rem;
+  overflow: hidden;
   position: relative;
-  min-height: 86vh;
 
-  &__bg {
-    grid-column: full;
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+  @include breakpoint(md) {
+    margin: 6rem 0;
+  }
+  
+  @include breakpoint(lg) {
+    margin: 8rem 0 6rem;
   }
 
   &__flex {
     display: flex;
-    flex-direction: column;
-    align-items: center;
 
     @include breakpoint(lg) {
       flex-direction: row;
+      align-items: flex-end;
+      gap: 1rem;
+
+      > * {
+        flex: 1 1 50%;
+      }
     }
   }
 
-  &__intro {
-    position: relative;
-    width: 100%;
-    max-width: 48rem;
+  &__greeting {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $l-green;
 
-    @include breakpoint(lg) {
-      max-width: 100%;
-      min-width: 32rem;
-      flex: 1 1 0;
-    }
-
-    h1 {
-      margin: 1.8rem 0 1.5rem;
+    svg {
+      flex-shrink: 0;
     }
 
     p {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      margin: 1.5rem 0 2.25rem;
+      margin: 0;
+      font-size: 1.063rem;
+      font-weight: 500;
+      line-height: 1.4;
     }
   }
 
-  &__illustr {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 3.5rem 0 0;
-
-    svg {
-      max-width: 24rem;
+  &__content {
+    p {
+      font-size: clamp(1.063rem, 4vw, 1.25rem);
+      line-height: 1.6;
+      color: $l-gray;
     }
 
+    // line
+    h1 {
+      position: relative;
+
+      @include breakpoint(lg) {
+        &::before {
+          content: '';
+          position: absolute;
+          left: calc(-250% - 1rem);
+          top: 2.25rem;
+          height: 3px;
+          width: 250%;
+          background-color: $l-pink;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2.25rem;
+  }
+
+  &__image {
+    display: none;
+
     @include breakpoint(lg) {
-      justify-content: flex-end;
-      margin: 4rem 1rem 1rem 2rem;
+      display: block;
+      max-width: 400px;
+
+      // bg square
+      &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: auto;
+        height: 250px;
+        right: 0;
+        bottom: 4.25rem;
+        left: calc(50% + 8rem);
+        background-color: $l-lightgreen;
+        border-radius: $border-radius;
+      }
+    }
+  }
+
+  &__svg-wrapper {
+    // bg cubes
+    &::before, &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      width: 200px;
+      height: 50px;
+      background: url('/assets/svgs/squares.svg') no-repeat;
+    }
+
+    // cubes-top
+    &::before {
+      right: -1.5rem;
+      bottom: 21rem;
+    }
+
+    // cubes-bottom
+    &::after {
+      left: calc(50% + 3rem);
+      bottom: 0;
+      transform: scale(-1, 1);
     }
   }
 }
