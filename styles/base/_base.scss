@@ -37,6 +37,28 @@ figcaption {
   }
 }
 
+.h2-container {
+  h2 {
+    position: relative;
+
+    // line
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1.25rem;
+      left: -3rem;
+      width: 128px;
+      height: 3px;
+      background-color: $l-pink;
+    }
+  }
+
+  p {
+    margin: 2.5rem 0;
+    max-width: 500px;
+  }
+}
+
 .lazy {
   &__fadein {
     opacity: 0;
@@ -53,8 +75,4 @@ figcaption {
   background-color: $bg-dark2;
   border-radius: $border-radius;
   transition: color .4s ease;
-}
-
-b {
-  font-weight: 800;
 }

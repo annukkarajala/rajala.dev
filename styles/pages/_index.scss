@@ -49,12 +49,6 @@
   }
 
   &__content {
-    p {
-      font-size: clamp(1.063rem, 4vw, 1.25rem);
-      line-height: 1.6;
-      color: $l-gray;
-    }
-
     // line
     h1 {
       position: relative;
@@ -126,5 +120,13 @@
       bottom: 0;
       transform: scale(-1, 1);
     }
+  }
+}
+
+.projects {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }

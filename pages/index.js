@@ -30,12 +30,12 @@ export default function Index() {
                   Koodia ja designia<br />
                   käsi kädessä
                 </h1>
-                <p>
+                <p className="big-p">
                   Olen koodari, jolta löytyy myös visuaalista silmää. Etenkin web-käyttöliittymien suunnittelu ja toteutus ovat lähellä sydäntä. Vahvinta osaamistani ovat modernit JavaScript-sovelluskehykset ja CSS.
                 </p>
                 <div className="hero__actions">
-                  <Button href="/" name="Lisää minusta" type="primary" />
-                  <Button href="/" name="Ota yhteyttä" type="secondary" />
+                  <Button href="#about-me" name="Lisää minusta" type="primary" />
+                  <Button href="#contact" name="Ota yhteyttä" type="secondary" />
                 </div>
               </div>
             </div>
@@ -48,17 +48,36 @@ export default function Index() {
           </div>
         </div>
       </header>
-      <section id="projects" className="content-grid__full">
+      <section id="projects" className="content-grid__full projects">
         <div className="content-grid__contained">
-          <h2>Projektit</h2>
-          <p>Pieniä ja suuria projekteja. Töissä tai vapaa-ajalla, yksin tai osana tiimiä.</p>
-          <ProjectCard href="/norma" />
+          <div className="h2-container">
+            <h2>Projektit</h2>
+            <p className="big-p">Pieniä ja suuria projekteja. Töissä tai vapaa-ajalla, yksin tai osana tiimiä.</p>
+          </div>
+          <div className="projects__container">
+            <ProjectCard
+              href="/norma"
+              year="2021"
+              name="Norma"
+              title="käyttö&shy;liittymä sääntöjen konfigurointiin"
+              labels={['Frontend-kehitys', 'UI-suunnittelu']}
+              tags={['React', 'SCSS', 'Figma']}
+              src="norma/norma-cover.png"
+            >
+              Bonskyltä saadussa toimeksiannossa haluttiin selain&shy;käyttö&shy;liittymä, jossa
+              käyttäjä voi selata sääntöjä ja tehdä niihin muutoksia. Muutosten versiohistoria
+              tuli säilyttää. Lopputuloksena syntyi työkalu, jota voivat käyttää sekä asiakkaat
+              että yritys itse.
+            </ProjectCard>
+          </div>
         </div>
       </section>
       <section id="about-me" className="content-grid__full">
         <div className="content-grid__contained spacing-bottom">
-          <h2>Lisää minusta</h2>
-          <p>Elämäntapakoodaaja, joka uppoutuu mielellään myös ruoanlaittoon, liikuntaan tai viherkasvien hoitoon.</p>
+          <div className="h2-container">
+            <h2>Lisää minusta</h2>
+            <p className="big-p">Elämäntapakoodaaja, joka uppoutuu mielellään myös ruoanlaittoon, liikuntaan tai viherkasvien hoitoon.</p>
+          </div>
           <div>
             <p>Vuosi oli ehkä 2009, kun päätin koodata omat netti­sivut. Huomasin pian, että web-kehitys on koukuttava sekoitus luovaa työtä ja ongelman­ratkaisua. Jatkoin netti­sivujen rakentelua, ja koodaaminen alkoi vetää puoleensa eri tavalla kuin muut harrastukset. Urapolkua valitessa web-kehitys tuntui itsestäänselvältä.</p>
             <p>Alla muutamia teknologioita ja työkaluja, joiden parissa olen työskennellyt viime aikoina.</p>
@@ -74,7 +93,7 @@ export default function Index() {
         <div className="content-grid__contained spacing-bottom">
           <SvgContactLetter />
           <h2>Ota yhteyttä</h2>
-          <p>Jos haluat jutella, laita postia osoitteeseen <a href="mailto:annukka@rajala.dev">annukka@rajala.dev</a> tai ota yhteyttä <a
+          <p className="big-p">Jos haluat jutella, laita postia osoitteeseen <a href="mailto:annukka@rajala.dev">annukka@rajala.dev</a> tai ota yhteyttä <a
             href="https://www.linkedin.com/in/annukkarajala/"
             target="_blank"
             rel="noopener noreferrer">
