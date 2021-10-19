@@ -111,22 +111,6 @@
   }
 }
 
-.tag {
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0.5rem 0;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  padding: 0.2rem 0.5rem;
-  border-radius: $border-radius;
-}
-
 // Color variations
 
 .Norma {
@@ -147,7 +131,7 @@
   .tag {
     background-color: $l-norma-card-var;
 
-    &--alt {
+    &--role {
       background-color: $l-norma-card-light;
     }
   }

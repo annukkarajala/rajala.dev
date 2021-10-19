@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import Tag from './Tag'
+
 export default function ProjectCard({ href, year, name, title, labels, tags, src, children }) {
   return (
     <Link href={href}>
@@ -13,19 +15,11 @@ export default function ProjectCard({ href, year, name, title, labels, tags, src
               <p>{children}</p>
               
               <div className="tag__container">
-                {labels.map((label, i) => (
-                <span key={`${i}:${label}`} className="tag tag--alt">
-                  {label}
-                </span>
-                ))}
+                {labels.map((label, i) => <Tag key={i} type="role" text={label} />)}
               </div>
 
               <div className="tag__container">
-                {tags.map((tag, i) => (
-                <span key={`${i}:${tag}`} className="tag">
-                  {tag}
-                </span>
-                ))}
+                {tags.map((tag, i) => <Tag key={i} text={tag} />)}
               </div>
             </div>
 

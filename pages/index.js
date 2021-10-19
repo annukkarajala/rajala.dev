@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/Layout';
 
 import Button from '../components/buttons/Button';
 import ProjectCard from '../components/ProjectCard';
+import TechnologyList from '../components/TechnologyList';
 
 import SvgHandWave from '../svgs/handwave.svg';
 import SvgDevelopment from '../svgs/development.svg';
@@ -72,19 +74,42 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section id="about-me" className="content-grid__full">
-        <div className="content-grid__contained spacing-bottom">
+      <section id="about-me" className="content-grid__full about-me">
+        <div className="content-grid__contained">
           <div className="h2-container">
             <h2>Lisää minusta</h2>
             <p className="big-p">Elämäntapakoodaaja, joka uppoutuu mielellään myös ruoanlaittoon, liikuntaan tai viherkasvien hoitoon.</p>
           </div>
-          <div>
-            <p>Vuosi oli ehkä 2009, kun päätin koodata omat netti­sivut. Huomasin pian, että web-kehitys on koukuttava sekoitus luovaa työtä ja ongelman­ratkaisua. Jatkoin netti­sivujen rakentelua, ja koodaaminen alkoi vetää puoleensa eri tavalla kuin muut harrastukset. Urapolkua valitessa web-kehitys tuntui itsestäänselvältä.</p>
-            <p>Alla muutamia teknologioita ja työkaluja, joiden parissa olen työskennellyt viime aikoina.</p>
-            <div>
-            <div></div>
-            <div></div>
-            <div></div>
+          <div className="about-me__container">
+            <div className="about-me__image-container">
+              <Image
+                src="/assets/profile.png"
+                alt="Annukka Rajala"
+                width={445}
+                height={445}
+                className="about-me__image"
+              />
+            </div>
+            <div className="about-me__content">
+              <p>Vuosi oli ehkä 2009, kun päätin koodata omat netti­sivut. Huomasin pian, että web-kehitys on koukuttava sekoitus luovaa työtä ja ongelman­ratkaisua. Jatkoin netti­sivujen rakentelua, ja koodaaminen alkoi vetää puoleensa eri tavalla kuin muut harrastukset. Urapolkua valitessa web-kehitys tuntui itsestäänselvältä.</p>
+              <p>Alla muutamia teknologioita ja työkaluja, joiden parissa olen työskennellyt viime aikoina.</p>
+              <div className="about-me__technologies">
+                <TechnologyList
+                  title="JavaScript"
+                  icon="js-icon"
+                  items={['Vue', 'Nuxt', 'React', 'Next.js', 'React Native']}
+                />
+                <TechnologyList
+                  title="HTML/CSS"
+                  icon="css-icon"
+                  items={['HTML5', 'CSS3', 'SCSS', 'Tailwind CSS']}
+                />
+                <TechnologyList
+                  title="UI-suunnittelu"
+                  icon="figma-icon"
+                  items={['Figma', 'Illustrator', 'Photoshop']}
+                />
+              </div>
             </div>
           </div>
         </div>

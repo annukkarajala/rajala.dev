@@ -130,3 +130,91 @@
     gap: 1.5rem;
   }
 }
+
+.about-me {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+    @include breakpoint(lg) {
+      gap: 3rem;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+    flex-shrink: 0;
+    display: inline-flex;
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+      flex-basis: 25%;
+    }
+
+    // bg flat shadow
+    &::after {
+      --offset: 1rem;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: var(--offset);
+      left: -var(--offset);
+      bottom: -var(--offset);
+      right: var(--offset);
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius;
+      background-color: $l-lightgreen;
+
+      @include breakpoint(xl) {
+        --offset: 1.5rem;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: $border-radius;
+  }
+
+  &__content {
+    p {
+      max-width: 740px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2.5rem;
+
+    @include breakpoint(xs) {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      > * {
+        flex: 1 1 calc(50% - 2rem);
+      }
+    }
+
+    @include breakpoint(lg) {
+      flex-wrap: nowrap;
+      gap: 3rem;
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+}

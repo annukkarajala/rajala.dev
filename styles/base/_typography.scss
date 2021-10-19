@@ -58,12 +58,21 @@ h2 {
   color: $l-darkblue;
 }
 
+h3 {
+  font-size: clamp(1.25rem, 8.5vw, 1.313rem);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1rem 0;
+  color: $l-darkblue;
+}
+
 small {
   line-height: 1.55;
 }
 
 .big-p {
-  font-size: clamp(1.125rem, 4vw, 1.25rem);
+  font-size: clamp(1.2rem, 4vw, 1.25rem);
   line-height: 1.6;
   color: $l-gray;
 }
