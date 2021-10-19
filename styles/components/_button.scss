@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// Button styles
+// -----------------------------------------------------------------------------
+
 .button {
   border: none;
   outline: none;
@@ -20,7 +24,8 @@
     &:visited {
       color: $l-white;
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $l-white;
       background-color: $l-green-var;
     }
@@ -36,7 +41,8 @@
     &:visited {
       color: $l-green;
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $l-green;
       background-color: $l-lightgreen-var;
     }

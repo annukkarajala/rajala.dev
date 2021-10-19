@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Logo from '../svgs/logo.svg';
+import Link from 'next/link'
+import Logo from '../svgs/logo.svg'
 
 export default function Navbar() {
   return (
@@ -14,5 +14,5 @@ export default function Navbar() {
         </div>
       </div>
     </div>
-  );
+  )
 }

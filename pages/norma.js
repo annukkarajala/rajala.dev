@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Head from 'next/head'
+import Image from 'next/image'
 
-import CountUpItem from '../components/CountUpItem';
-import Layout, { siteTitle } from '../components/Layout';
-import LazyImage from '../components/LazyImage';
-import LazyVideo from '../components/LazyVideo';
+import CountUpItem from '../components/CountUpItem'
+import Layout, { siteTitle } from '../components/Layout'
+import LazyImage from '../components/LazyImage'
+import LazyVideo from '../components/LazyVideo'
 
 export default function Norma() {
   return (
@@ -16,15 +16,19 @@ export default function Norma() {
         <div className="content-grid__contained">
           <h1>Norma — käyttö&shy;liittymä sääntöjen konfigurointiin</h1>
           <small>
-            2021 <span className="separator">•</span> Frontend-kehitys & UI/UX-suunnittelu
+            2021 <span className="separator">•</span> Frontend-kehitys &
+            UI/UX-suunnittelu
           </small>
           <p>
-            Jyväskylän ammatti&shy;korkea&shy;koulun yritys&shy;projekti&shy;opinto&shy;jaksolla
-            muodostettu Avalor-projekti&shy;ryhmä kehitti selain&shy;käyttö&shy;liittymän sääntöjen
-            konfigurointiin. Normassa käyttäjä voi selata, hakea ja suodattaa sääntöjä sekä muokata
-            tiettyjä osia säännöistä. JSON-muotoiset sääntöjen konfiguraatio&shy;tiedostot noudetaan
-            version&shy;hallinta&shy;järjestelmästä, ja käyttäjän tekemät muutokset viedään
-            Git-committeina takaisin version&shy;hallinta&shy;järjestelmään.
+            Jyväskylän ammatti&shy;korkea&shy;koulun
+            yritys&shy;projekti&shy;opinto&shy;jaksolla muodostettu
+            Avalor-projekti&shy;ryhmä kehitti selain&shy;käyttö&shy;liittymän
+            sääntöjen konfigurointiin. Normassa käyttäjä voi selata, hakea ja
+            suodattaa sääntöjä sekä muokata tiettyjä osia säännöistä.
+            JSON-muotoiset sääntöjen konfiguraatio&shy;tiedostot noudetaan
+            version&shy;hallinta&shy;järjestelmästä, ja käyttäjän tekemät
+            muutokset viedään Git-committeina takaisin
+            version&shy;hallinta&shy;järjestelmään.
           </p>
           <div className="cover__outer-container">
             <div className="cover__inner-container">
@@ -63,24 +67,28 @@ export default function Norma() {
               rel="noopener noreferrer">
               Vincit Oyj
             </a>
-            :tä 1.5.2021) suunnittelee ja toteuttaa mm. sähköisiä asiointi&shy;palveluja,
-            verkko&shy;palveluja, B2B-tilaus&shy;järjestelmiä sekä tuote&shy;tieto&shy;ratkaisuja.
-            Rules engine on Bonskyn mikro&shy;palvelu&shy;arkki&shy;tehtuurissa käyttämä ratkaisu,
-            jota hyödynnetään mm. järjestelmien ja tuote&shy;tieto&shy;pankkien välisten
-            tieto&shy;mallien mäppäykseen sekä datan muunnoksiin ja vertailuun.
+            :tä 1.5.2021) suunnittelee ja toteuttaa mm. sähköisiä
+            asiointi&shy;palveluja, verkko&shy;palveluja,
+            B2B-tilaus&shy;järjestelmiä sekä tuote&shy;tieto&shy;ratkaisuja.
+            Rules engine on Bonskyn mikro&shy;palvelu&shy;arkki&shy;tehtuurissa
+            käyttämä ratkaisu, jota hyödynnetään mm. järjestelmien ja
+            tuote&shy;tieto&shy;pankkien välisten tieto&shy;mallien mäppäykseen
+            sekä datan muunnoksiin ja vertailuun.
           </p>
           <p>
-            Bonskyltä saadussa toimeksi&shy;annossa pää&shy;tavoitteena oli helpottaa sääntöjen
-            konfigurointia. Avalor-projekti&shy;ryhmän tehtävänä oli kehittää
-            selain&shy;käyttö&shy;liittymä, jonka avulla käyttäjä voi selata sääntöjä ja tehdä
-            niihin muutoksia. Muutosten versio&shy;historia tuli säilyttää. Loppu&shy;tuloksena
-            haluttiin siis hallinta&shy;työkalu, jota voivat käyttää sekä asiakkaat että yritys
-            itse.
+            Bonskyltä saadussa toimeksi&shy;annossa pää&shy;tavoitteena oli
+            helpottaa sääntöjen konfigurointia. Avalor-projekti&shy;ryhmän
+            tehtävänä oli kehittää selain&shy;käyttö&shy;liittymä, jonka avulla
+            käyttäjä voi selata sääntöjä ja tehdä niihin muutoksia. Muutosten
+            versio&shy;historia tuli säilyttää. Loppu&shy;tuloksena haluttiin
+            siis hallinta&shy;työkalu, jota voivat käyttää sekä asiakkaat että
+            yritys itse.
           </p>
           <p>
-            Norma toteutettiin MERN-stackilla (React, Node.js, Express ja MongoDB) ja Sassilla
-            (SCSS). Käyttö&shy;liittymä suunniteltiin Figmassa, ja projekti&shy;työskentelyssä
-            hyödynnettiin ketteriä menetelmiä.
+            Norma toteutettiin MERN-stackilla (React, Node.js, Express ja
+            MongoDB) ja Sassilla (SCSS). Käyttö&shy;liittymä suunniteltiin
+            Figmassa, ja projekti&shy;työskentelyssä hyödynnettiin ketteriä
+            menetelmiä.
           </p>
         </div>
       </section>
@@ -137,23 +145,27 @@ export default function Norma() {
         </h2>
         <div>
           <p>
-            Sääntöjen konfiguraatiotiedostojen JSON-objektien määrä ja rakenne vaihteli paljon. Yksi
-            projektin merkittävimmistä haasteista oli, miten backendistä saatava sääntödata voidaan
-            esittää käyttöliittymässä järkevällä tavalla.
+            Sääntöjen konfiguraatiotiedostojen JSON-objektien määrä ja rakenne
+            vaihteli paljon. Yksi projektin merkittävimmistä haasteista oli,
+            miten backendistä saatava sääntödata voidaan esittää
+            käyttöliittymässä järkevällä tavalla.
           </p>
           <p>
-            Hyödynsin sääntöjen tietojen esittämisessä rekursiivista renderöintiä. Esimerkiksi
-            säännön ehtojen ANY ja ALL -osiot puretaan auki omina kokonaisuuksinaan, tarpeen mukaan
-            sisäkkäin ketjutettuina. Osioiden lapsikomponenteille määrätään objektien avaimien ja
-            rakenteen perusteella tiettyjä tyylimäärittelyjä. Näin muodostuu puumainen hierarkia,
-            joka havainnollistaa ehtojen suhteita toisiinsa.
+            Hyödynsin sääntöjen tietojen esittämisessä rekursiivista
+            renderöintiä. Esimerkiksi säännön ehtojen ANY ja ALL -osiot puretaan
+            auki omina kokonaisuuksinaan, tarpeen mukaan sisäkkäin
+            ketjutettuina. Osioiden lapsikomponenteille määrätään objektien
+            avaimien ja rakenteen perusteella tiettyjä tyylimäärittelyjä. Näin
+            muodostuu puumainen hierarkia, joka havainnollistaa ehtojen suhteita
+            toisiinsa.
           </p>
           <p>
-            Toisinaan sääntöihin liittyvät avain-arvo -parien listat olivat satojen tai tuhansien
-            rivien pituisia. Sovellusta testatessa huomasimme, että pisimmät listat aiheuttivat
-            merkittäviä suorituskykyongelmia. Perehdyin aiheeseen, ja react-window-pakettia
-            hyödyntämällä sekä ylimääräisiä re-rendereitä rajoittamalla paransin listojen
-            suorituskykyä huomattavasti.
+            Toisinaan sääntöihin liittyvät avain-arvo -parien listat olivat
+            satojen tai tuhansien rivien pituisia. Sovellusta testatessa
+            huomasimme, että pisimmät listat aiheuttivat merkittäviä
+            suorituskykyongelmia. Perehdyin aiheeseen, ja react-window-pakettia
+            hyödyntämällä sekä ylimääräisiä re-rendereitä rajoittamalla paransin
+            listojen suorituskykyä huomattavasti.
           </p>
         </div>
       </section>
@@ -203,19 +215,22 @@ export default function Norma() {
         </h2>
         <div>
           <p>
-            Toimeksianto tuntui haastavalta, mutta tartuimme tarmokkaasti haasteeseen. Pidin etenkin
-            käyttöliittymän suunnittelusta ja toteutuksesta, joten oli mahtava kuulla, että
-            lopputulos ylitti kaikki odotukset.
+            Toimeksianto tuntui haastavalta, mutta tartuimme tarmokkaasti
+            haasteeseen. Pidin etenkin käyttöliittymän suunnittelusta ja
+            toteutuksesta, joten oli mahtava kuulla, että lopputulos ylitti
+            kaikki odotukset.
           </p>
           <p>
-            Projekti huipentui intensiiviseen kahden kuukauden koodausjaksoon, joka opetti paljon.
-            Pääsin syventymään Reactiin, ja aiemmin hämmennystä aiheuttanut JSON-datan käsittely
-            tuli tutuksi. Loistavan ryhmäilmapiirin ja tekemisen meiningin ansiosta tavoitteet
-            saavutettiin kevyesti ja toimeksiantaja oli tyytyväinen. Rock&apos;n&apos;roll!
+            Projekti huipentui intensiiviseen kahden kuukauden koodausjaksoon,
+            joka opetti paljon. Pääsin syventymään Reactiin, ja aiemmin
+            hämmennystä aiheuttanut JSON-datan käsittely tuli tutuksi. Loistavan
+            ryhmäilmapiirin ja tekemisen meiningin ansiosta tavoitteet
+            saavutettiin kevyesti ja toimeksiantaja oli tyytyväinen.
+            Rock&apos;n&apos;roll!
             <span aria-hidden="true">🤘</span>
           </p>
         </div>
       </section>
     </Layout>
-  );
+  )
 }

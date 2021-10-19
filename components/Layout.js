@@ -1,8 +1,8 @@
-import Meta from './Meta';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Meta from './Meta'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
-export const siteTitle = 'Rajala.dev';
+export const siteTitle = 'Rajala.dev'
 
 export default function Layout({ children }) {
   return (
@@ -12,5 +12,5 @@ export default function Layout({ children }) {
       <div className="content-grid">{children}</div>
       <Footer />
     </>
-  );
+  )
 }

@@ -11,7 +11,7 @@
   @include breakpoint(md) {
     margin: 6rem 0;
   }
-  
+
   @include breakpoint(lg) {
     margin: 8rem 0 6rem;
   }
@@ -99,7 +99,8 @@
 
   &__svg-wrapper {
     // bg cubes
-    &::before, &::after {
+    &::before,
+    &::after {
       content: '';
       z-index: -1;
       position: absolute;

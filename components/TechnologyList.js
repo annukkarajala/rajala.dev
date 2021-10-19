@@ -1,8 +1,8 @@
-import Tag from './Tag';
+import Tag from './Tag'
 
-import SvgJSIcon from '../svgs/js-icon.svg';
-import SvgCSSIcon from '../svgs/css-icon.svg';
-import SvgFigmaIcon from '../svgs/figma-icon.svg';
+import SvgJSIcon from '../svgs/js-icon.svg'
+import SvgCSSIcon from '../svgs/css-icon.svg'
+import SvgFigmaIcon from '../svgs/figma-icon.svg'
 
 export default function TechnologyList({ title, icon, items }) {
   const iconTypes = {
@@ -20,8 +20,10 @@ export default function TechnologyList({ title, icon, items }) {
         <h3>{title}</h3>
       </div>
       <div className="tag__container">
-        {items.map((item, i) => <Tag key={i} text={item} />)}
+        {items.map((item, i) => (
+          <Tag key={i} text={item} />
+        ))}
       </div>
     </div>
-  );
+  )
 }

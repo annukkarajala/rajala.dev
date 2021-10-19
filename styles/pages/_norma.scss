@@ -1,24 +1,31 @@
-$link: #003C70;
-$link-hover: #063C8D;
-$link-underline: #90C0E5;
+$link: #003c70;
+$link-hover: #063c8d;
+$link-underline: #90c0e5;
 
 .norma {
-  background: rgb(9,8,14);
-  background: linear-gradient(180deg, rgba(9,8,14,1) 0%, rgba(9,8,14,1) 45%, rgba(0,60,112,1) 100%);
+  background: rgb(9, 8, 14);
+  background: linear-gradient(
+    180deg,
+    rgba(9, 8, 14, 1) 0%,
+    rgba(9, 8, 14, 1) 45%,
+    rgba(0, 60, 112, 1) 100%
+  );
 }
 
 .link-effect {
   color: $link;
   font-weight: 800;
-  transition: background-size .3s ease;
-  background: linear-gradient(to bottom, transparent 38%, $link-bg 0) center center/0% 72% no-repeat;
-  
+  transition: background-size 0.3s ease;
+  background: linear-gradient(to bottom, transparent 38%, $link-bg 0) center
+    center/0% 72% no-repeat;
+
   &:visited {
     color: $link;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $link-hover;
     background-size: 100% 100%;
     text-decoration: none;
@@ -64,6 +71,6 @@ $link-underline: #90C0E5;
   line-height: 1;
 
   @include breakpoint(md) {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
   }
 }

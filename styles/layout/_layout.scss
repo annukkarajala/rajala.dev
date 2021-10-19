@@ -21,7 +21,10 @@
 .content-grid {
   display: grid;
   --padding: 1rem;
-  grid-template-columns: [full-start] minmax(var(--padding), 1fr) [contain-start] minmax(0, 70rem) [contain-end] minmax(var(--padding), 1fr) [full-end];
+  grid-template-columns:
+    [full-start] minmax(var(--padding), 1fr)
+    [contain-start] minmax(0, 70rem) [contain-end]
+    minmax(var(--padding), 1fr) [full-end];
 
   @include breakpoint(sm) {
     --padding: 2rem;
@@ -55,8 +58,11 @@
     grid-template-columns: inherit;
 
     @include breakpoint(md) {
-      grid-template-columns: var(--padding) [cover-start] 1fr [cover-end] var(--padding);
       grid-gap: 0;
+      grid-template-columns:
+        var(--padding)
+        [cover-start] 1fr [cover-end]
+        var(--padding);
     }
 
     > * {
@@ -73,7 +79,7 @@
   &__contained {
     @include breakpoint(md) {
       display: grid;
-      grid-template-columns:[contain-start] minmax(0, 70rem) [contain-end];
+      grid-template-columns: [contain-start] minmax(0, 70rem) [contain-end];
     }
 
     > * {
@@ -83,7 +89,6 @@
     }
   }
 }
-
 
 // Project details layout
 
@@ -129,7 +134,7 @@
   }
 
   h1 {
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
   }
 
   p {

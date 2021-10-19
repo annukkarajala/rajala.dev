@@ -1,9 +1,18 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from 'next/link'
+import Image from 'next/image'
 
 import Tag from './Tag'
 
-export default function ProjectCard({ href, year, name, title, labels, tags, src, children }) {
+export default function ProjectCard({
+  href,
+  year,
+  name,
+  title,
+  labels,
+  tags,
+  src,
+  children,
+}) {
   return (
     <Link href={href}>
       <a>
@@ -11,15 +20,21 @@ export default function ProjectCard({ href, year, name, title, labels, tags, src
           <div className="project-card__content-wrapper">
             <div className="project-card__content">
               <small>{year}</small>
-              <h3>{name} — {title}</h3>
+              <h3>
+                {name} — {title}
+              </h3>
               <p>{children}</p>
-              
+
               <div className="tag__container">
-                {labels.map((label, i) => <Tag key={i} type="role" text={label} />)}
+                {labels.map((label, i) => (
+                  <Tag key={i} type="role" text={label} />
+                ))}
               </div>
 
               <div className="tag__container">
-                {tags.map((tag, i) => <Tag key={i} text={tag} />)}
+                {tags.map((tag, i) => (
+                  <Tag key={i} text={tag} />
+                ))}
               </div>
             </div>
 
@@ -39,5 +54,5 @@ export default function ProjectCard({ href, year, name, title, labels, tags, src
         </div>
       </a>
     </Link>
-  );
+  )
 }
