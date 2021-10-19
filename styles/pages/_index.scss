@@ -3,21 +3,23 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-  margin: 3rem 0;
-  padding-bottom: 2.25rem;
+  margin: 3rem 0 0;
   overflow: hidden;
   position: relative;
 
   @include breakpoint(md) {
-    margin: 6rem 0;
+    margin: 6rem 0 0;
   }
 
   @include breakpoint(lg) {
     margin: 8rem 0 6rem;
+    padding-bottom: 2.25rem;
   }
 
   &__flex {
     display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
     @include breakpoint(lg) {
       flex-direction: row;
@@ -49,11 +51,11 @@
   }
 
   &__content {
-    // line
     h1 {
       position: relative;
 
       @include breakpoint(lg) {
+        // line
         &::before {
           content: '';
           position: absolute;
@@ -65,6 +67,10 @@
         }
       }
     }
+
+    p {
+      max-width: 700px;
+    }
   }
 
   &__actions {
@@ -75,24 +81,41 @@
   }
 
   &__image {
-    display: none;
+    margin: 0 1rem;
+    max-width: 365px;
+    align-self: flex-end;
+    flex-shrink: 0;
+    position: relative;
+
+    @include breakpoint(md) {
+      margin-top: -4rem;
+    }
+
+    // bg square
+    &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      width: auto;
+      height: 65%;
+      right: -3rem;
+      bottom: 2rem;
+      left: -1rem;
+      background-color: $l-lightgreen;
+      border-radius: $border-radius 0 0 $border-radius;
+    }
 
     @include breakpoint(lg) {
-      display: block;
+      margin: 0;
       max-width: 400px;
+      position: initial;
 
-      // bg square
       &::after {
-        content: '';
-        z-index: -1;
-        position: absolute;
-        width: auto;
         height: 250px;
+        width: auto;
         right: 0;
         bottom: 4.25rem;
         left: calc(50% + 8rem);
-        background-color: $l-lightgreen;
-        border-radius: $border-radius;
       }
     }
   }
@@ -125,6 +148,13 @@
 }
 
 .projects {
+  @include breakpoint(md) {
+    margin-top: -8rem;
+  }
+  @include breakpoint(lg) {
+    margin-top: 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
