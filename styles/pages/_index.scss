@@ -3,9 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-  margin: 3rem 0 0;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 2.25rem;
 
   @include breakpoint(md) {
     margin: 6rem 0 0;
@@ -13,7 +14,6 @@
 
   @include breakpoint(lg) {
     margin: 8rem 0 6rem;
-    padding-bottom: 2.25rem;
   }
 
   &__flex {
@@ -27,7 +27,7 @@
       gap: 1rem;
 
       > * {
-        flex: 1 1 50%;
+        flex: 1;
       }
     }
   }
@@ -52,15 +52,15 @@
 
   &__content {
     h1 {
-      position: relative;
-
       @include breakpoint(lg) {
+        position: relative;
+
         // line
         &::before {
           content: '';
           position: absolute;
-          left: calc(-250% - 1rem);
           top: 2.25rem;
+          left: calc(-250% - 1rem);
           height: 3px;
           width: 250%;
           background-color: $l-pink;
@@ -81,14 +81,19 @@
   }
 
   &__image {
-    margin: 0 1rem;
-    max-width: 365px;
+    position: relative;
     align-self: flex-end;
     flex-shrink: 0;
-    position: relative;
+    margin: 0 1rem;
+    width: min(365px, 100%);
 
     @include breakpoint(md) {
       margin-top: -4rem;
+    }
+    @include breakpoint(lg) {
+      position: initial;
+      margin: 0;
+      max-width: 400px;
     }
 
     // bg square
@@ -103,16 +108,10 @@
       left: -1rem;
       background-color: $l-lightgreen;
       border-radius: $border-radius 0 0 $border-radius;
-    }
 
-    @include breakpoint(lg) {
-      margin: 0;
-      max-width: 400px;
-      position: initial;
-
-      &::after {
-        height: 250px;
+      @include breakpoint(lg) {
         width: auto;
+        height: 250px;
         right: 0;
         bottom: 4.25rem;
         left: calc(50% + 8rem);
@@ -135,14 +134,23 @@
     // cubes-top
     &::before {
       right: -1.5rem;
-      bottom: 21rem;
+      bottom: calc(100% - 0.25rem);
+
+      @include breakpoint(lg) {
+        bottom: 21rem;
+      }
     }
 
     // cubes-bottom
     &::after {
-      left: calc(50% + 3rem);
-      bottom: 0;
+      left: calc(50% - 17.5rem);
+      bottom: -2.25rem;
       transform: scale(-1, 1);
+
+      @include breakpoint(lg) {
+        left: calc(50% + 3rem);
+        bottom: 0;
+      }
     }
   }
 }
@@ -246,6 +254,124 @@
       > * {
         flex: 1;
       }
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    position: relative;
+    align-self: flex-start;
+    flex-shrink: 0;
+    width: min(325px, 100%);
+
+    @include breakpoint(xl) {
+      position: initial;
+      width: 325px;
+      margin-left: -2rem;
+    }
+
+    // bg square
+    &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      width: auto;
+      height: calc(100% + 1rem);
+      left: -5rem;
+      right: 1rem;
+      top: 0;
+      background-color: $l-lightgreen;
+      border-radius: 0 $border-radius $border-radius 0;
+
+      @include breakpoint(xl) {
+        height: 240px;
+        left: 0;
+        right: calc(50% + 17.5rem);
+        top: 5.5rem;
+      }
+    }
+  }
+
+  &__svg-wrapper {
+    // bg cubes
+    &::before,
+    &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      width: 200px;
+      height: 50px;
+      background: url('/assets/svgs/squares.svg') no-repeat;
+    }
+
+    // cubes-top
+    &::before {
+      right: -3.9rem;
+      bottom: calc(93%);
+
+      @include breakpoint(xl) {
+        right: calc(50% + 12.6rem);
+        bottom: 77%;
+      }
+    }
+
+    // cubes-bottom
+    &::after {
+      left: calc(50% - 15.5rem);
+      bottom: -5.25rem;
+
+      @include breakpoint(xl) {
+        left: -1rem;
+        bottom: 10%;
+      }
+    }
+  }
+
+  &__content {
+    @include breakpoint(md) {
+      align-self: center;
+    }
+
+    h2 {
+      @include breakpoint(md) {
+        display: inline;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 1.75rem;
+          margin-left: 1rem;
+          height: 3px;
+          width: 1000%;
+          background-color: $l-pink;
+        }
+      }
+    }
+
+    .big-p {
+      max-width: 500px;
+    }
+
+    a {
+      font-weight: 500;
+      color: $l-green;
+      text-decoration: underline;
     }
   }
 }

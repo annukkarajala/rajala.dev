@@ -91,7 +91,7 @@ export default function Index() {
         </div>
       </section>
       <section id="about-me" className="content-grid__full about-me">
-        <div className="content-grid__contained">
+        <div className="content-grid__contained spacing-bottom">
           <div className="h2-container">
             <h2>Lisää minusta</h2>
             <p className="big-p">
@@ -143,22 +143,30 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section id="contact" className="content-grid__full">
-        <div className="content-grid__contained spacing-bottom">
-          <SvgContactLetter />
-          <h2>Ota yhteyttä</h2>
-          <p className="big-p">
-            Jos haluat jutella, laita postia osoitteeseen{' '}
-            <a href="mailto:annukka@rajala.dev">annukka@rajala.dev</a> tai ota
-            yhteyttä{' '}
-            <a
-              href="https://www.linkedin.com/in/annukkarajala/"
-              target="_blank"
-              rel="noopener noreferrer">
-              LinkedIn
-            </a>
-            issä.
-          </p>
+      <section id="contact" className="content-grid__full contact">
+        <div className="content-grid__contained">
+          <div className="contact__flex">
+            <div className="contact__image">
+              <div className="contact__svg-wrapper">
+                <SvgContactLetter />
+              </div>
+            </div>
+            <div className="contact__content">
+              <h2>Ota yhteyttä</h2>
+              <p className="big-p">
+                Jos haluat jutella, laita postia osoitteeseen{' '}
+                <a href="mailto:annukka@rajala.dev">annukka@rajala.dev</a> tai
+                ota yhteyttä{' '}
+                <a
+                  href="https://www.linkedin.com/in/annukkarajala/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+                issä.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
