@@ -2,13 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout, { siteTitle } from '../components/Layout'
 
-import Button from '../components/buttons/Button'
+import Button from '../components/actions/Button'
+import CustomLink from '../components/actions/CustomLink'
 import ProjectCard from '../components/ProjectCard'
 import TechnologyList from '../components/TechnologyList'
 
 import SvgHandWave from '../svgs/handwave.svg'
-import SvgDevelopment from '../svgs/development.svg'
-import SvgContactLetter from '../svgs/contact-letter.svg'
+import SvgDevelopment from '../svgs/illustr/development.svg'
+import SvgContactLetter from '../svgs/illustr/contact-letter.svg'
 
 export default function Index() {
   return (
@@ -16,8 +17,8 @@ export default function Index() {
       <Head>
         <title>Etusivu · {siteTitle}</title>
       </Head>
-      <header className="content-grid__full hero">
-        <div className="content-grid__contained">
+      <header className="full hero">
+        <div className="contained">
           <div className="hero__flex">
             <div>
               <div className="hero__greeting">
@@ -63,8 +64,8 @@ export default function Index() {
           </div>
         </div>
       </header>
-      <section id="projects" className="content-grid__full projects">
-        <div className="content-grid__contained">
+      <section id="projects" className="full projects">
+        <div className="contained">
           <div className="h2-container">
             <h2>Projektit</h2>
             <p className="big-p">
@@ -90,8 +91,8 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section id="about-me" className="content-grid__full about-me">
-        <div className="content-grid__contained spacing-bottom">
+      <section id="about-me" className="full about-me">
+        <div className="contained spacing-bottom">
           <div className="h2-container">
             <h2>Lisää minusta</h2>
             <p className="big-p">
@@ -125,17 +126,17 @@ export default function Index() {
               <div className="about-me__technologies">
                 <TechnologyList
                   title="JavaScript"
-                  icon="js-icon"
+                  icon="js"
                   items={['Vue', 'Nuxt', 'React', 'Next.js', 'React Native']}
                 />
                 <TechnologyList
                   title="HTML/CSS"
-                  icon="css-icon"
+                  icon="css"
                   items={['HTML5', 'CSS3', 'SCSS', 'Tailwind CSS']}
                 />
                 <TechnologyList
                   title="UI-suunnittelu"
-                  icon="figma-icon"
+                  icon="figma"
                   items={['Figma', 'Illustrator', 'Photoshop']}
                 />
               </div>
@@ -143,8 +144,8 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section id="contact" className="content-grid__full contact">
-        <div className="content-grid__contained">
+      <section id="contact" className="full contact">
+        <div className="contained">
           <div className="contact__flex">
             <div className="contact__image">
               <div className="contact__svg-wrapper">
@@ -157,12 +158,9 @@ export default function Index() {
                 Jos haluat jutella, laita postia osoitteeseen{' '}
                 <a href="mailto:annukka@rajala.dev">annukka@rajala.dev</a> tai
                 ota yhteyttä{' '}
-                <a
-                  href="https://www.linkedin.com/in/annukkarajala/"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                <CustomLink href="https://www.linkedin.com/in/annukkarajala/">
                   LinkedIn
-                </a>
+                </CustomLink>
                 issä.
               </p>
             </div>

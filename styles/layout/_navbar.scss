@@ -8,11 +8,11 @@
   }
 
   &__grid {
-    display: grid;
     --padding: 1rem;
+    display: grid;
     grid-template-columns:
       [full-start] minmax(var(--padding), 1fr)
-      [contain-start] minmax(0, 70rem) [contain-end]
+      [contain-start] minmax(0, $max-width) [contain-end]
       minmax(var(--padding), 1fr) [full-end];
 
     > * {

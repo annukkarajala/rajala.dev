@@ -11,6 +11,7 @@ $breakpoint-xxl: 1536px;
 
 $breakpoint-card: 928px;
 
+$max-width: 1180px;
 $border-radius: 4px;
 
 $txt-dark: #17141e;
@@ -20,8 +21,8 @@ $bg-dark: #09080e;
 $bg-dark2: #1c1a22;
 $bg-accent: #131124;
 
-$bg-light: #fcfcfc;
-$bg-white: #fcfcfc;
+$bg-light: #fff;
+$bg-white: #fff;
 
 $grey-dark: #798292;
 $grey-light: #9eaabe;
@@ -44,7 +45,7 @@ $pri-norma: rgba(0, 60, 112, 1);
 $l-green: #0d829c;
 $l-green-var: #0e7288;
 $l-pink: #fcc5e9;
-$l-white: #fcfcfc;
+$l-white: #ffffff;
 $l-lightgreen: #e4f5f6;
 $l-lightgreen-var: #cdebed;
 $l-darkblue: #142850;

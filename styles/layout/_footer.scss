@@ -3,15 +3,15 @@
 // -----------------------------------------------------------------------------
 
 .footer {
-  background: $bg-dark;
-  color: $txt-light;
+  background: $l-lightgreen;
+  padding: 2rem 0;
 
   &__grid {
-    display: grid;
     --padding: 1rem;
+    display: grid;
     grid-template-columns:
       [full-start] minmax(var(--padding), 1fr)
-      [contain-start] minmax(0, 70rem) [contain-end]
+      [contain-start] minmax(0, $max-width) [contain-end]
       minmax(var(--padding), 1fr) [full-end];
 
     > * {
@@ -23,11 +23,38 @@
     }
   }
 
-  &__copyright {
-    padding: 1rem 0;
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
 
-    small {
-      font-size: 0.975rem;
+    @include breakpoint(sm) {
+      flex-direction: row;
+      text-align: initial;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+      color: currentColor;
+      transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &:hover,
+      &:focus {
+        color: $l-green;
+      }
     }
   }
 }

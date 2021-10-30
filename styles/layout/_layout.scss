@@ -19,11 +19,11 @@
 // </div>
 
 .content-grid {
-  display: grid;
   --padding: 1rem;
+  display: grid;
   grid-template-columns:
     [full-start] minmax(var(--padding), 1fr)
-    [contain-start] minmax(0, 70rem) [contain-end]
+    [contain-start] minmax(0, $max-width) [contain-end]
     minmax(var(--padding), 1fr) [full-end];
 
   @include breakpoint(sm) {
@@ -52,7 +52,7 @@
     }
   }
 
-  &__full {
+  .full {
     grid-column: full;
     display: inherit;
     grid-template-columns: inherit;
@@ -71,15 +71,15 @@
       @include breakpoint(md) {
         grid-column: cover;
         justify-self: center;
-        max-width: 70rem;
+        max-width: $max-width;
       }
     }
   }
 
-  &__contained {
+  .contained {
     @include breakpoint(md) {
       display: grid;
-      grid-template-columns: [contain-start] minmax(0, 70rem) [contain-end];
+      grid-template-columns: [contain-start] minmax(0, $max-width) [contain-end];
     }
 
     > * {

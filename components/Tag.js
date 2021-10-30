@@ -1,9 +1,9 @@
 import cx from 'classnames'
 
 export default function Tag({ type, text }) {
-  let tagClass = cx('tag', {
-    'tag--role': type === 'role',
+  let className = cx('tag', {
+    [`tag--${type}`]: type,
   })
 
-  return <span className={tagClass}>{text}</span>
+  return <span className={className}>{text}</span>
 }
