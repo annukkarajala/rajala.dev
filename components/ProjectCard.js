@@ -1,38 +1,36 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
 import Tag from './Tag'
 
 export default function ProjectCard({
-  href,
-  year,
   name,
+  slug,
+  year,
   title,
-  labels,
   tags,
-  src,
   children,
 }) {
+  const href = `/${slug}`
+  const heading = `${name} — ${title}`
+
   return (
     <Link href={href}>
-      <a>
-        <div className={`project-card ${name}`}>
+      <a className="project-card__wrapper">
+        <div className={`project-card ${slug}`}>
           <div className="project-card__content-wrapper">
             <div className="project-card__content">
               <small>{year}</small>
-              <h3>
-                {name} — {title}
-              </h3>
+              <h3 className="project-card__title">{heading}</h3>
               <p>{children}</p>
 
               <div className="tag__container">
-                {labels.map((label, i) => (
-                  <Tag key={i} type="role" text={label} />
+                {tags.roles.map((tag, i) => (
+                  <Tag key={i} type="role" text={tag} />
                 ))}
               </div>
 
               <div className="tag__container">
-                {tags.map((tag, i) => (
+                {tags.tech.map((tag, i) => (
                   <Tag key={i} text={tag} />
                 ))}
               </div>
@@ -42,7 +40,7 @@ export default function ProjectCard({
               <div className="project-card__image">
                 <Image
                   alt={`${name}: kansikuva`}
-                  src={`/assets/${src}`}
+                  src={`/assets/${slug}/cover.png`}
                   width={1024}
                   height={576}
                   quality={100}

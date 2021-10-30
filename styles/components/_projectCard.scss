@@ -29,6 +29,8 @@
     border-radius: $border-radius;
     background-color: $l-lightgreen;
 
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
     @include breakpoint(xl) {
       --offset: 1.5rem;
     }
@@ -69,10 +71,14 @@
     height: 280px;
     border-radius: $border-radius 0;
 
+    transform: scale(1.01);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
     @include breakpoint(card) {
       flex-basis: 50%;
       width: auto;
       height: auto;
+      margin-bottom: -1.5rem;
     }
   }
 
@@ -102,18 +108,42 @@
 
   p {
     display: none;
-    font-size: 1.063rem;
+    font-size: 1.125rem;
     margin: 1rem 0 2rem;
 
     @include breakpoint(xs) {
       display: block;
     }
   }
+
+  // Hover styles
+
+  &__wrapper {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &:hover {
+      transform: translateY(-0.25rem) translateX(-0.25rem) scale(1.01);
+    }
+  }
+
+  &:hover {
+    &::after {
+      transform: translateY(0.25rem) translateX(0.25rem);
+    }
+  }
+
+  @include breakpoint(card) {
+    &:hover {
+      .project-card__image-container {
+        transform: translateY(-1rem);
+      }
+    }
+  }
 }
 
 // Color variations
 
-.Norma {
+.norma {
   background-color: $l-norma-card;
   border: 1px solid $l-norma-card-var;
 
@@ -123,7 +153,8 @@
       @include card-image-shadow($l-norma-card-var);
     }
 
-    &__content {
+    &__content,
+    &__title {
       color: $l-norma-card-text;
     }
   }
@@ -133,6 +164,31 @@
 
     &--role {
       background-color: $l-norma-card-light;
+    }
+  }
+}
+
+.wimmalab {
+  background-color: $l-wimmalab-card;
+  border: 1px solid $l-wimmalab-card-var;
+
+  .project-card {
+    &__image-container {
+      background-color: $l-wimmalab-card-var;
+      @include card-image-shadow($l-wimmalab-card-var);
+    }
+
+    &__content,
+    &__title {
+      color: $l-wimmalab-card-text;
+    }
+  }
+
+  .tag {
+    background-color: $l-wimmalab-card-var;
+
+    &--role {
+      background-color: $l-wimmalab-card-light;
     }
   }
 }

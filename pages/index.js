@@ -11,6 +11,31 @@ import SvgHandWave from '../svgs/handwave.svg'
 import SvgDevelopment from '../svgs/illustr/development.svg'
 import SvgContactLetter from '../svgs/illustr/contact-letter.svg'
 
+const projects = [
+  {
+    name: 'Norma',
+    slug: 'norma',
+    year: 2021,
+    title: 'käyttöliittymä sääntöjen konfigurointiin',
+    tags: {
+      roles: ['Frontend-kehitys', 'UI-suunnittelu'],
+      tech: ['React', 'SCSS', 'Figma'],
+    },
+    desc: 'Bonskyltä saadussa toimeksiannossa haluttiin käyttöliittymä, jossa käyttäjä voi selata sääntöjä ja tehdä niihin muutoksia. Muutosten versiohistoria tuli säilyttää. Lopputuloksena syntyi työkalu, jota voivat käyttää sekä asiakkaat että yritys itse.',
+  },
+  {
+    name: 'WIMMA Lab',
+    slug: 'wimmalab',
+    year: 2021,
+    title: 'nettisivujen uudistus Next.js:llä',
+    tags: {
+      roles: ['Frontend-kehitys', 'UI-suunnittelu'],
+      tech: ['React', 'Next.js', 'SCSS', 'Figma', 'Illustrator'],
+    },
+    desc: 'Toimin tiiminvetäjänä WIMMA Lab -konseptin brändin sekä nettisivujen uudistuksessa. Next.js:llä rakennetulle sivustolle toteutettiin lokalisaatio, ja oppaat-osion sisällön päivittäminen tapahtuu kätevästi Markdown-tiedostoja hyödyntämällä.',
+  },
+]
+
 export default function Index() {
   return (
     <Layout>
@@ -74,20 +99,17 @@ export default function Index() {
             </p>
           </div>
           <div className="projects__container">
-            <ProjectCard
-              href="/norma"
-              year="2021"
-              name="Norma"
-              title="käyttö&shy;liittymä sääntöjen konfigurointiin"
-              labels={['Frontend-kehitys', 'UI-suunnittelu']}
-              tags={['React', 'SCSS', 'Figma']}
-              src="norma/norma-cover.png">
-              Bonskyltä saadussa toimeksiannossa haluttiin
-              selain&shy;käyttö&shy;liittymä, jossa käyttäjä voi selata sääntöjä
-              ja tehdä niihin muutoksia. Muutosten versiohistoria tuli
-              säilyttää. Lopputuloksena syntyi työkalu, jota voivat käyttää sekä
-              asiakkaat että yritys itse.
-            </ProjectCard>
+            {projects.map((project, i) => (
+              <ProjectCard
+                key={i}
+                name={project.name}
+                slug={project.slug}
+                year={project.year}
+                title={project.title}
+                tags={project.tags}>
+                {project.desc}
+              </ProjectCard>
+            ))}
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import cx from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -9,7 +10,7 @@ export default function CustomLink({ href, locale, className = '', children }) {
   if (isInternalLink) {
     return (
       <Link href={href} locale={locale ? locale : router.locale}>
-        <a className={`internal-link ${className}`}>{children}</a>
+        <a className={cx('internal-link', className)}>{children}</a>
       </Link>
     )
   }
@@ -19,7 +20,7 @@ export default function CustomLink({ href, locale, className = '', children }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`external-link ${className}`}>
+      className={cx('external-link', className)}>
       {children}
     </a>
   )
