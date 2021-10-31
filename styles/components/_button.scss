@@ -14,8 +14,11 @@
   font-weight: 700;
   border-radius: $border-radius;
   white-space: nowrap;
-  transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
   cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) color 0.15s
+    cubic-bezier(0.215, 0.61, 0.355, 1);
+  backface-visibility: hidden;
+  transform-origin: bottom center;
 
   &--primary {
     color: $l-white;
@@ -28,6 +31,7 @@
     &:focus {
       color: $l-white;
       background-color: $l-green-var;
+      transform: translateZ(0) scale(1.025);
     }
     &:focus {
       box-shadow: 0 0 0 2px $l-pink;
@@ -45,6 +49,7 @@
     &:focus {
       color: $l-green;
       background-color: $l-lightgreen-var;
+      transform: translateZ(0) scale(1.025);
     }
     &:focus {
       box-shadow: 0 0 0 2px $l-pink;

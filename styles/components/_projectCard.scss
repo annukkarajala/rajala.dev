@@ -28,8 +28,7 @@
     height: 100%;
     border-radius: $border-radius;
     background-color: $l-lightgreen;
-
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     @include breakpoint(xl) {
       --offset: 1.5rem;
@@ -70,9 +69,8 @@
     width: calc(100% + var(--padding));
     height: 280px;
     border-radius: $border-radius 0;
-
     transform: scale(1.01);
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     @include breakpoint(card) {
       flex-basis: 50%;
@@ -119,16 +117,17 @@
   // Hover styles
 
   &__wrapper {
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backface-visibility: hidden;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     &:hover {
-      transform: translateY(-0.25rem) translateX(-0.25rem) scale(1.01);
+      transform: translateZ(0) scale(1.012);
     }
   }
 
   &:hover {
     &::after {
-      transform: translateY(0.25rem) translateX(0.25rem);
+      transform: scale(0.988);
     }
   }
 
