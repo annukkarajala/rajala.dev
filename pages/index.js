@@ -61,8 +61,8 @@ export default function Index() {
                   käsi kädessä
                 </h1>
                 <p className="big-p">
-                  Olen koodari, jolta löytyy myös visuaalista silmää. Etenkin
-                  web-käyttöliittymien suunnittelu ja toteutus ovat lähellä
+                  Olen koodari, jolta löytyy myös visuaalista silmää.
+                  Web-käyttöliittymien suunnittelu ja toteutus ovat lähellä
                   sydäntä. Vahvinta osaamistani ovat modernit
                   JavaScript-sovelluskehykset ja CSS.
                 </p>
