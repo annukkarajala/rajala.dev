@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Layout, { siteTitle } from '../components/Layout'
+import Layout, { siteTitle } from '@/components/Layout'
 
-import Button from '../components/actions/Button'
-import CustomLink from '../components/actions/CustomLink'
-import ProjectCard from '../components/ProjectCard'
-import TechnologyList from '../components/TechnologyList'
+import Button from '@/components/actions/Button'
+import CustomLink from '@/components/actions/CustomLink'
+import ProjectCard from '@/components/ProjectCard'
+import TechnologyList from '@/components/TechnologyList'
 
-import SvgHandWave from '../svgs/handwave.svg'
-import SvgDevelopment from '../svgs/illustr/development.svg'
-import SvgContactLetter from '../svgs/illustr/contact-letter.svg'
+import SvgHandWave from '@/svgs/handwave.svg'
+import SvgDevelopment from '@/svgs/illustr/development.svg'
+import SvgContactLetter from '@/svgs/illustr/contact-letter.svg'
 
 const projects = [
   {
@@ -56,8 +56,7 @@ export default function Index() {
               </div>
               <div className="hero__content">
                 <h1>
-                  Koodia ja designia
-                  <br />
+                  Koodia ja designia <br />
                   käsi kädessä
                 </h1>
                 <p className="big-p">

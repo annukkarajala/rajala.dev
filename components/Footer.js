@@ -1,10 +1,10 @@
-import CustomLink from './actions/CustomLink'
+import CustomLink from '@/components/actions/CustomLink'
 
-import SvgCopyright from '../svgs/icons/copyright.svg'
-import SvgGitHub from '../svgs/icons/github.svg'
-import SvgLinkedIn from '../svgs/icons/linkedin.svg'
-import SvgDribbble from '../svgs/icons/dribbble.svg'
-import SvgCodePen from '../svgs/icons/codepen.svg'
+import SvgCopyright from '@/svgs/icons/copyright.svg'
+import SvgGitHub from '@/svgs/icons/github.svg'
+import SvgLinkedIn from '@/svgs/icons/linkedin.svg'
+import SvgDribbble from '@/svgs/icons/dribbble.svg'
+import SvgCodePen from '@/svgs/icons/codepen.svg'
 
 const links = [
   {

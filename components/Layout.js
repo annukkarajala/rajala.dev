@@ -1,6 +1,6 @@
-import Meta from './Meta'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Meta from '@/components/Meta'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export const siteTitle = 'Rajala.dev'
 

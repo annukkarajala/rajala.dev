@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Tag from './Tag'
+import Tag from '@/components/Tag'
 
 export default function ProjectCard({
   name,

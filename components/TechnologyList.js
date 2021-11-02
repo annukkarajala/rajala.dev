@@ -1,7 +1,7 @@
 import Tag from './Tag'
-import SvgJS from '../svgs/icons/js.svg'
-import SvgCSS from '../svgs/icons/css.svg'
-import SvgFigma from '../svgs/icons/figma.svg'
+import SvgJS from '@/svgs/icons/js.svg'
+import SvgCSS from '@/svgs/icons/css.svg'
+import SvgFigma from '@/svgs/icons/figma.svg'
 
 export default function TechnologyList({ title, icon, items }) {
   const iconTypes = {

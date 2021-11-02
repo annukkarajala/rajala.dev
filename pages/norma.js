@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import CountUpItem from '../components/CountUpItem'
-import Layout, { siteTitle } from '../components/Layout'
-import LazyImage from '../components/LazyImage'
-import LazyVideo from '../components/LazyVideo'
+import Layout, { siteTitle } from '@/components/Layout'
+import CountUpItem from '@/components/CountUpItem'
+import LazyImage from '@/components/LazyImage'
+import LazyVideo from '@/components/LazyVideo'
 
 export default function Norma() {
   return (
