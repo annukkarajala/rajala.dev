@@ -32,20 +32,18 @@ function SvgIcon({ component, ...props }) {
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__grid">
-        <div className="footer__flex">
-          <div className="footer__copyright">
-            <SvgCopyright width="14" height="14" />
-            <p>{new Date().getFullYear()} — Rajala.dev</p>
-          </div>
-          <div className="footer__icons">
-            {links.map((link, i) => (
-              <CustomLink href={link.url} key={i}>
-                <SvgIcon component={link.icon} width="32" height="32" />
-              </CustomLink>
-            ))}
-          </div>
+    <footer className="footer__grid">
+      <div className="footer__flex">
+        <div className="footer__copyright">
+          <SvgCopyright width="14" height="14" />
+          <p>{new Date().getFullYear()} — Rajala.dev</p>
+        </div>
+        <div className="footer__icons">
+          {links.map((link, i) => (
+            <CustomLink href={link.url} key={i}>
+              <SvgIcon component={link.icon} width="32" height="32" />
+            </CustomLink>
+          ))}
         </div>
       </div>
     </footer>

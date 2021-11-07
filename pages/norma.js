@@ -6,6 +6,8 @@ import CustomLink from '@/components/actions/CustomLink'
 import LazyImage from '@/components/LazyImage'
 import LazyVideo from '@/components/LazyVideo'
 
+import SvgContactLetter from '@/svgs/illustr/contact-letter.svg'
+
 export default function Norma() {
   return (
     <Layout>
@@ -191,7 +193,7 @@ export default function Norma() {
         </div>
       </section>
 
-      <section className="spacing-bottom">
+      <section>
         <h2 className="project-h2">
           <span className="h2-subheading">Mitä opin</span>
           Erinomaiset eväät tuleviin projekteihin
@@ -211,6 +213,29 @@ export default function Norma() {
             saavutettiin kevyesti ja toimeksiantaja oli tyytyväinen.
             <span aria-hidden="true"> 🤘</span>
           </p>
+        </div>
+      </section>
+      <section id="contact" className="full contact">
+        <div className="contained">
+          <div className="contact__flex">
+            <div className="contact__image">
+              <div className="contact__svg-wrapper">
+                <SvgContactLetter />
+              </div>
+            </div>
+            <div className="contact__content">
+              <h2>Ota yhteyttä</h2>
+              <p className="big-p">
+                Jos haluat jutella, laita postia osoitteeseen{' '}
+                <a href="mailto:annukka@rajala.dev">annukka@rajala.dev</a> tai
+                ota yhteyttä{' '}
+                <CustomLink href="https://www.linkedin.com/in/annukkarajala/">
+                  LinkedIn
+                </CustomLink>
+                issä.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
