@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import Layout, { siteTitle } from '@/components/Layout'
-import CountUpItem from '@/components/CountUpItem'
+import CustomLink from '@/components/actions/CustomLink'
 import LazyImage from '@/components/LazyImage'
 import LazyVideo from '@/components/LazyVideo'
 
@@ -12,29 +12,21 @@ export default function Norma() {
       <Head>
         <title>Norma — {siteTitle}</title>
       </Head>
-      <header className="content-grid__full project-header norma">
-        <div className="content-grid__contained">
-          <h1>Norma — käyttö&shy;liittymä sääntöjen konfigurointiin</h1>
-          <small>
-            2021 <span className="separator">•</span> Frontend-kehitys &
-            UI/UX-suunnittelu
-          </small>
-          <p>
-            Jyväskylän ammatti&shy;korkea&shy;koulun
-            yritys&shy;projekti&shy;opinto&shy;jaksolla muodostettu
-            Avalor-projekti&shy;ryhmä kehitti selain&shy;käyttö&shy;liittymän
-            sääntöjen konfigurointiin. Normassa käyttäjä voi selata, hakea ja
-            suodattaa sääntöjä sekä muokata tiettyjä osia säännöistä.
-            JSON-muotoiset sääntöjen konfiguraatio&shy;tiedostot noudetaan
-            version&shy;hallinta&shy;järjestelmästä, ja käyttäjän tekemät
-            muutokset viedään Git-committeina takaisin
-            version&shy;hallinta&shy;järjestelmään.
-          </p>
+      <header className="full hero project-header norma">
+        <div className="contained">
+          <div className="hero__content">
+            <h1>Norma — käyttö&shy;liittymä sääntöjen konfigurointiin</h1>
+            <p className="big-p">
+              Frontend-kehitys, UI-suunnittelu
+              <span className="separator">•</span>
+              2021
+            </p>
+          </div>
           <div className="cover__outer-container">
             <div className="cover__inner-container">
               <Image
                 alt="Norma: kansikuva"
-                src="/assets/norma/norma-cover.png"
+                src="/assets/norma/cover.png"
                 width={1120}
                 height={630}
                 quality={100}
@@ -45,28 +37,42 @@ export default function Norma() {
           </div>
         </div>
       </header>
+
+      <section className="full project-intro">
+        <div className="contained">
+          <div className="project-intro__container">
+            <h2>
+              <span className="h2-subheading">Kuvaus</span>
+            </h2>
+            <p className="big-p">
+              Jyväskylän ammatti&shy;korkea&shy;koulun
+              yritys&shy;projekti&shy;opinto&shy;jaksolla muodostettu
+              Avalor-projekti&shy;ryhmä kehitti selain&shy;käyttö&shy;liittymän
+              sääntöjen konfigurointiin. Normassa käyttäjä voi selata, hakea ja
+              suodattaa sääntöjä sekä muokata tiettyjä osia säännöistä.
+              JSON-muotoiset sääntöjen konfiguraatio&shy;tiedostot noudetaan
+              version&shy;hallinta&shy;järjestelmästä, ja käyttäjän tekemät
+              muutokset viedään Git-committeina takaisin
+              version&shy;hallinta&shy;järjestelmään.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section>
-        <h2>
+        <h2 className="project-h2">
           <span className="h2-subheading">Tavoitteet</span>
           Käyttäjä&shy;ystävällinen tapa sääntöjen yllä&shy;pitoon
         </h2>
         <div>
           <p>
-            <a
-              href="https://bonsky.com/"
-              className="link-effect"
-              target="_blank"
-              rel="noopener noreferrer">
+            <CustomLink href="https://bonsky.com/" className="project-link">
               Bonsky Digital Oy
-            </a>{' '}
+            </CustomLink>{' '}
             (liittyi osaksi{' '}
-            <a
-              href="https://www.vincit.fi/"
-              className="link-effect"
-              target="_blank"
-              rel="noopener noreferrer">
+            <CustomLink href="https://www.vincit.fi/" className="project-link">
               Vincit Oyj
-            </a>
+            </CustomLink>
             :tä 1.5.2021) suunnittelee ja toteuttaa mm. sähköisiä
             asiointi&shy;palveluja, verkko&shy;palveluja,
             B2B-tilaus&shy;järjestelmiä sekä tuote&shy;tieto&shy;ratkaisuja.
@@ -86,15 +92,15 @@ export default function Norma() {
           </p>
           <p>
             Norma toteutettiin MERN-stackilla (React, Node.js, Express ja
-            MongoDB) ja Sassilla (SCSS). Käyttö&shy;liittymä suunniteltiin
-            Figmassa, ja projekti&shy;työskentelyssä hyödynnettiin ketteriä
-            menetelmiä.
+            MongoDB) ja SCSS:llä. Käyttö&shy;liittymä suunniteltiin Figmassa, ja
+            projekti&shy;työskentelyssä hyödynnettiin ketteriä menetelmiä.
           </p>
         </div>
       </section>
-      <section className="content-grid__full alternate">
-        <div className="content-grid__contained">
-          <h2>
+
+      <section className="full bg-alt">
+        <div className="contained">
+          <h2 className="project-h2">
             <span className="h2-subheading">Suunnittelu</span>
             Käyttö&shy;liittymän kehitys Figmassa
           </h2>
@@ -129,8 +135,8 @@ export default function Norma() {
         </div>
       </section>
 
-      <section className="content-grid__full alternate--light">
-        <div className="content-grid__contained">
+      <section className="full">
+        <div className="contained">
           <LazyVideo
             url="/assets/norma/norma-01_saannon-hakeminen.mp4"
             caption="Lopullinen käyttöliittymä: säännön hakeminen ja tietojen tarkastelu"
@@ -139,7 +145,7 @@ export default function Norma() {
       </section>
 
       <section>
-        <h2>
+        <h2 className="project-h2">
           <span className="h2-subheading">Haasteet</span>
           Moni&shy;mutkaisen JSON-datan käsittely front&shy;endissä
         </h2>
@@ -170,14 +176,14 @@ export default function Norma() {
         </div>
       </section>
 
-      <section className="content-grid__full alternate--light">
-        <div className="content-grid__contained spacing-bottom">
+      <section className="full bg-alt">
+        <div className="contained spacing-bottom">
           <LazyVideo
             url="/assets/norma/norma-02_teeman-kustomointi.mp4"
             caption="Käyttöliittymän kustomointi: värivariaatiot tallennetaan tietokantaan ja tuodaan CSS-muuttujina sovellukseen"
           />
         </div>
-        <div className="content-grid__contained">
+        <div className="contained">
           <LazyVideo
             url="/assets/norma/norma-03_filtterit.mp4"
             caption="Sääntöjen filtteröinti tiettyjen avain-arvo -parien perusteella"
@@ -185,31 +191,8 @@ export default function Norma() {
         </div>
       </section>
 
-      <section className="content-grid__full alternate">
-        <div className="content-grid__contained">
-          <h2>
-            <span className="h2-subheading">Projekti lukuina</span>
-            Tiivis yhteistyö takasi onnistumisen
-          </h2>
-          <div className="stats-grid">
-            <div>
-              <CountUpItem start={6} end={19} duration={1.75} />
-              <p>Palaveria toimeksiantajan kanssa</p>
-            </div>
-            <div>
-              <CountUpItem start={13} end={200} duration={1} suffix="+ h" />
-              <p>Projektiryhmän Discord-kokoontumisia</p>
-            </div>
-            <div>
-              <CountUpItem start={29} end={704} duration={0.75} />
-              <p>Git-committia</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="spacing-bottom">
-        <h2>
+        <h2 className="project-h2">
           <span className="h2-subheading">Mitä opin</span>
           Erinomaiset eväät tuleviin projekteihin
         </h2>
@@ -226,8 +209,7 @@ export default function Norma() {
             hämmennystä aiheuttanut JSON-datan käsittely tuli tutuksi. Loistavan
             ryhmäilmapiirin ja tekemisen meiningin ansiosta tavoitteet
             saavutettiin kevyesti ja toimeksiantaja oli tyytyväinen.
-            Rock&apos;n&apos;roll!
-            <span aria-hidden="true">🤘</span>
+            <span aria-hidden="true"> 🤘</span>
           </p>
         </div>
       </section>
