@@ -43,7 +43,7 @@ export default function ProjectCard({
                   src={`/assets/${slug}/cover.png`}
                   width={1024}
                   height={576}
-                  quality={100}
+                  quality={90}
                   layout="responsive"
                 />
               </div>

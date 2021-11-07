@@ -114,7 +114,7 @@ export default function Norma() {
                   src="/assets/norma/norma-figma-v1.png"
                   width={940}
                   height={660}
-                  quality={100}
+                  quality={90}
                   layout="responsive"
                 />
               </a>
@@ -127,7 +127,7 @@ export default function Norma() {
                   src="/assets/norma/norma-figma-v2.png"
                   width={940}
                   height={660}
-                  quality={100}
+                  quality={90}
                   layout="responsive"
                 />
               </a>
