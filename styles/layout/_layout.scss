@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 // HTML structure should be something like this:
-// <article className="content-grid">
+// <div className="content-grid">
 //   <section>
 //     <h2></h2>
 //     <div></div>
@@ -16,12 +16,15 @@
 //     <h2></h2>
 //     <div></div>
 //   </section>
-// </article>
+// </div>
 
 .content-grid {
-  display: grid;
   --padding: 1rem;
-  grid-template-columns: [full-start] minmax(var(--padding), 1fr) [contain-start] minmax(0, 70rem) [contain-end] minmax(var(--padding), 1fr) [full-end];
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--padding), 1fr)
+    [contain-start] minmax(0, $max-width) [contain-end]
+    minmax(var(--padding), 1fr) [full-end];
 
   @include breakpoint(sm) {
     --padding: 2rem;
@@ -49,14 +52,17 @@
     }
   }
 
-  &__full {
+  .full {
     grid-column: full;
     display: inherit;
     grid-template-columns: inherit;
 
     @include breakpoint(md) {
-      grid-template-columns: var(--padding) [cover-start] 1fr [cover-end] var(--padding);
       grid-gap: 0;
+      grid-template-columns:
+        var(--padding)
+        [cover-start] 1fr [cover-end]
+        var(--padding);
     }
 
     > * {
@@ -65,15 +71,15 @@
       @include breakpoint(md) {
         grid-column: cover;
         justify-self: center;
-        max-width: 70rem;
+        max-width: $max-width;
       }
     }
   }
 
-  &__contained {
+  .contained {
     @include breakpoint(md) {
       display: grid;
-      grid-template-columns:[contain-start] minmax(0, 70rem) [contain-end];
+      grid-template-columns: [contain-start] minmax(0, $max-width) [contain-end];
     }
 
     > * {
@@ -84,67 +90,7 @@
   }
 }
 
-.alternate {
-  background-color: $bg-dark;
-  color: $txt-light;
-  padding: 2rem 0;
-
-  .h2-subheading {
-    color: $grey-light;
-  }
-
-  figcaption {
-    color: $grey-light;
-  }
-
-  &--light {
-    background-color: $bg-white;
-  }
-}
-
-.h2-subheading {
-  display: block;
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0 0 1rem;
-  color: $grey-dark;
-}
-
-.project-header {
-  background-color: $bg-dark;
-  color: $txt-light;
-  padding: 3rem 0 0;
-
-  @include breakpoint(md) {
-    padding-top: 6rem;
-
-    > * {
-      margin-bottom: -30vh;
-    }
-
-    margin-bottom: 30vh;
-  }
-
-  h1 {
-    margin-bottom: .75rem;
-  }
-
-  p {
-    font-size: 1.125rem;
-    margin: 2.25rem 0 2.5rem;
-
-    @include breakpoint(md) {
-      font-size: 1.313rem;
-      line-height: 1.6;
-      margin: 3.5rem 0 4rem;
-    }
-  }
-
-  small {
-    font-size: 1.125rem;
-    color: $grey-light;
-  }
-}
+// Project details layout
 
 // Project cover image is 'zoomed in' on small viewports for clarity
 .cover {
@@ -152,6 +98,7 @@
     width: calc(100% + 1rem);
     height: 24rem;
     overflow: hidden;
+    @include box-shadow;
 
     @include breakpoint(sm) {
       width: calc(100% + 2rem);
@@ -162,7 +109,6 @@
       width: 100%;
       height: 100%;
       border-radius: $border-radius;
-      @include box-shadow;
     }
   }
 
@@ -171,6 +117,7 @@
     height: 27rem;
     border-radius: $border-radius;
     overflow: hidden;
+    background-color: $l-lightgreen-var;
 
     @include breakpoint(sm) {
       width: 56rem;

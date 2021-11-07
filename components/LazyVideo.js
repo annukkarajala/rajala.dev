@@ -1,9 +1,9 @@
-import cx from 'classnames';
-import { useState } from 'react';
-import ReactPlayer from 'react-player/file';
+import cx from 'classnames'
+import { useState } from 'react'
+import ReactPlayer from 'react-player/file'
 
 export default function LazyVideo({ url, caption }) {
-  const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(false)
 
   return (
     <figure className={cx('video lazy__fadein', { lazy__loaded: isReady })}>
@@ -23,5 +23,5 @@ export default function LazyVideo({ url, caption }) {
       </div>
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
-  );
+  )
 }

@@ -1,63 +1,58 @@
+// -----------------------------------------------------------------------------
+// Button styles
+// -----------------------------------------------------------------------------
+
 .button {
   border: none;
   outline: none;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  padding: 0.9rem 1rem 0.6rem 1.3rem;
-  margin-right: 0.7rem;
+  padding: 0.625rem 1rem;
   font-size: 1.125rem;
-  font-weight: 800;
+  letter-spacing: -0.2px;
+  font-weight: 700;
   border-radius: $border-radius;
   white-space: nowrap;
-  transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
   cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) color 0.15s
+    cubic-bezier(0.215, 0.61, 0.355, 1);
+  backface-visibility: hidden;
+  transform-origin: bottom center;
 
   &--primary {
-    color: rgba($bg-accent, 0.75);
-    background-color: $primary-yel;
-    border: 2px solid $primary-yel;
+    color: $l-white;
+    background-color: $l-green;
 
     &:visited {
-      color: rgba($bg-accent, 0.75);
+      color: $l-white;
     }
-    
-    &:hover {
-      color: rgba($bg-accent, 0.85);
-      background-color: $primary-yel2;
-      border-color: $primary-yel2;
-    }
-
+    &:hover,
     &:focus {
-      background-color: $bg-dark;
-      color: $primary-yel2;
-      border-color: $primary-yel2;
-      box-shadow: 0 0 0 1px $primary-yel2;
+      color: $l-white;
+      background-color: $l-green-var;
+      transform: translateZ(0) scale(1.025);
     }
-  }
-
-  .icon-right {
-    width: 1.25rem;
-    margin: -0.3rem 0 0 0.7rem;
+    &:focus {
+      box-shadow: 0 0 0 2px $l-pink;
+    }
   }
 
   &--secondary {
-    color: $grey-lighter;
-    background-color: $bg-dark;
-    padding-left: 1.2rem;
-    border: 2px solid $grey-lighter;
+    color: $l-green;
+    background-color: $l-lightgreen;
 
     &:visited {
-      color: $grey-lighter;
+      color: $l-green;
     }
-
-    &:hover, &:focus {
-      color: $bg-white;
-      border-color: $bg-white;
-    }
-
+    &:hover,
     &:focus {
-      box-shadow: 0 0 0 1px $bg-white;
+      color: $l-green;
+      background-color: $l-lightgreen-var;
+      transform: translateZ(0) scale(1.025);
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px $l-pink;
     }
   }
 }

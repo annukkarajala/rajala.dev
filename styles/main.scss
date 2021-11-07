@@ -24,12 +24,12 @@
 // Components
 @import
   'components/button',
-  'components/video',
-  'components/card',
-  'components/introduction';
+  'components/projectCard',
+  'components/tag',
+  'components/technologyList',
+  'components/video';
 
 // Page-specific styles
 @import
-  'pages/home',
-  'pages/projects',
+  'pages/index',
   'pages/norma';

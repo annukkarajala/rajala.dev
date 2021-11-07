@@ -1,0 +1,193 @@
+// -----------------------------------------------------------------------------
+// ProjectCard styles
+// -----------------------------------------------------------------------------
+
+.project-card {
+  --padding: 1.5rem;
+  position: relative;
+  border-radius: $border-radius;
+
+  @include breakpoint(card) {
+    --padding: 2rem;
+  }
+  @include breakpoint(xl) {
+    --padding: 3rem;
+  }
+
+  // bg flat shadow
+  &::after {
+    --offset: 1rem;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: var(--offset);
+    left: var(--offset);
+    bottom: -var(--offset);
+    right: -var(--offset);
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+    background-color: $l-lightgreen;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    @include breakpoint(xl) {
+      --offset: 1.5rem;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: var(--padding) var(--padding) 0 var(--padding);
+
+    @include breakpoint(card) {
+      flex-direction: row;
+      padding: var(--padding) 0 0 var(--padding);
+
+      > * {
+        flex: 0 0 50%;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 1rem;
+
+    @include breakpoint(xs) {
+      margin-bottom: 1.5rem;
+    }
+    @include breakpoint(card) {
+      flex-basis: calc(50% - var(--padding));
+      margin: 0 var(--padding) var(--padding) 0;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+    overflow: hidden;
+    width: calc(100% + var(--padding));
+    height: 280px;
+    border-radius: $border-radius 0;
+    transform: scale(1.01);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    @include breakpoint(card) {
+      flex-basis: 50%;
+      width: auto;
+      height: auto;
+      margin-bottom: -1.5rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 572px;
+    height: 317px;
+
+    @include breakpoint(sm) {
+      width: 820px;
+      height: 455px;
+    }
+  }
+
+  small {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    margin: 0.5rem 0 1.5rem;
+    font-size: clamp(1.313rem, 6vw, 2rem);
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  p {
+    display: none;
+    font-size: 1.125rem;
+    margin: 1rem 0 2rem;
+
+    @include breakpoint(xs) {
+      display: block;
+    }
+  }
+
+  // Hover styles
+
+  &__wrapper {
+    backface-visibility: hidden;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &:hover {
+      transform: translateZ(0) scale(1.012);
+    }
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(0.988);
+    }
+  }
+
+  @include breakpoint(card) {
+    &:hover {
+      .project-card__image-container {
+        transform: translateY(-1rem);
+      }
+    }
+  }
+}
+
+// Color variations
+
+.project-card.norma {
+  background-color: $l-norma-card;
+  border: 1px solid $l-norma-card-var;
+
+  .project-card {
+    &__image-container {
+      background-color: $l-norma-card-var;
+      @include card-image-shadow($l-norma-card-var);
+    }
+
+    &__content,
+    &__title {
+      color: $l-norma-card-text;
+    }
+  }
+
+  .tag {
+    background-color: $l-norma-card-var;
+
+    &--role {
+      background-color: $l-norma-card-light;
+    }
+  }
+}
+
+.project-card.wimmalab {
+  background-color: $l-wimmalab-card;
+  border: 1px solid $l-wimmalab-card-var;
+
+  .project-card {
+    &__image-container {
+      background-color: $l-wimmalab-card-var;
+      @include card-image-shadow($l-wimmalab-card-var);
+    }
+
+    &__content,
+    &__title {
+      color: $l-wimmalab-card-text;
+    }
+  }
+
+  .tag {
+    background-color: $l-wimmalab-card-var;
+
+    &--role {
+      background-color: $l-wimmalab-card-light;
+    }
+  }
+}

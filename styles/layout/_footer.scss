@@ -2,16 +2,16 @@
 // Footer styles
 // -----------------------------------------------------------------------------
 
-footer {
-  background: $bg-dark;
-  color: $txt-light;
-}
-
 .footer {
   &__grid {
-    display: grid;
     --padding: 1rem;
-    grid-template-columns: [full-start] minmax( var(--padding), 1fr) [contain-start] minmax(0, 70rem) [contain-end] minmax(var(--padding), 1fr) [full-end];
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(var(--padding), 1fr)
+      [contain-start] minmax(0, $max-width) [contain-end]
+      minmax(var(--padding), 1fr) [full-end];
+    background: $l-lightgreen;
+    padding: 2rem 0;
 
     > * {
       grid-column: contain;
@@ -25,158 +25,35 @@ footer {
   &__flex {
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
 
     @include breakpoint(sm) {
       flex-direction: row;
-      justify-content: space-between;
+      text-align: initial;
     }
-  }
-
-  &__info {
-    margin: 1rem 0;
-    p {
-      margin: 1rem 0 0;
-      font-size: 1rem;
-    }
-
-    b {
-      font-size: 1.125rem;
-    }
-  }
-
-  &__links {
-    display: flex;
-    flex-direction: column;
-
-    @include breakpoint(sm) {
-      flex-direction: row;
-    }
-  }
-
-  &__links-section {
-    margin: 1.5rem 0;
-
-    @include breakpoint(sm) {
-      padding: 0 1rem;
-    }
-
-    &:first-of-type {
-      @include breakpoint(sm) {
-        width: 16vw;
-        min-width: 10rem;
-        max-width: 14rem;
-      }
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    margin: 1rem 0;
-    a, a:visited {
-      color: $grey-light;
-      padding: .2rem .3rem .2rem 0;
-    }
-
-    a:hover, a:focus {
-      color: $primary-cya;
-    }
-  }
-
-  h4 {
-    font-size: 1rem;
-    font-weight: 800;
-    margin: 0 0 2rem;
-  }
-
-  &__copyright-separator {
-    grid-column: full;
-    border-top: 1px solid $secondary-vio2;
-    margin-top: 2rem;
   }
 
   &__copyright {
-    padding: 1rem 0;
-
-    small {
-      font-size: .975rem;
-    }
-  }
-}
-
-.contact {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding:  0 1rem 1rem;
-  margin-top: -2rem;
-  background-color: #15141f;
-  border-radius: $border-radius;
-
-  @include breakpoint(sm) {
-    padding: 0 2rem 2rem;
-  }
-
-  @include breakpoint(md) {
-    grid-template-columns: 1.3fr [txt-start] 2fr [txt-end];
-    padding: 0 2rem 1rem 1rem;
-    grid-gap: 1.2rem;
-  }
-
-  @include breakpoint(lg) {
-    grid-template-columns: 1fr [txt-start] 2fr [txt-end];
-    grid-gap: 5rem;
-  }
-
-  &__illustr {
-    width: 100%;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
+    align-items: center;
+    gap: 0.25rem;
+  }
 
-    @include breakpoint(md) {
-      margin-bottom: 0;
+  &__icons {
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+      color: currentColor;
+      transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &:hover,
+      &:focus {
+        color: $l-green;
+      }
     }
-
-    > * {
-      height: 100%;
-      width: 100%;
-      max-width: 22rem;
-      margin-top: -0.5rem;
-    }
-  }
-
-  &__text {
-    @include breakpoint(md) {
-      grid-column: txt;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 1rem;
-      padding: 1rem 0;
-    }
-  }
-
-  h2 {
-    margin: 0 0 1rem;
-  }
-
-  p {
-    margin: 0;
-    font-size: 1.188rem;
-    max-width: 36rem;
-  }
-
-  a, a:visited {
-    color: $primary-yel;
-  }
-
-  a:hover, a:focus {
-    color: $primary-yel2;
   }
 }

@@ -1,55 +1,49 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import Image from 'next/image'
+import Tag from '@/components/Tag'
 
-import IconFigma from '../svgs/icon-figma.svg';
-import IconReact from '../svgs/icon-react.svg';
-import IconSCSS from '../svgs/icon-sass.svg';
-import LazyImage from './LazyImage';
+export default function ProjectCard({
+  name,
+  slug,
+  year,
+  title,
+  tags,
+  children,
+}) {
+  const href = `/${slug}`
+  const heading = `${name} — ${title}`
 
-export default function ProjectCard({ href }) {
   return (
     <Link href={href}>
-      <a>
-        <div className="project-card">
-          <div className="project-card__desc">
-            <small>
-              2021{' '}
-              <span className="small-additional">
-                <span className="separator">•</span> Frontend-kehitys &amp; UI/UX-suunnittelu
-              </span>
-            </small>
-            <h3>Norma — käyttö&shy;liittymä sääntöjen konfigurointiin</h3>
-            <p className="project-card__description">
-              Bonskyltä saadussa toimeksiannossa haluttiin selain&shy;käyttö&shy;liittymä, jossa
-              käyttäjä voi selata sääntöjä ja tehdä niihin muutoksia. Muutosten versio&shy;historia
-              tuli säilyttää. Loppu&shy;tuloksena syntyi työkalu, jota voivat käyttää sekä asiakkaat
-              että yritys itse.
-            </p>
+      <a className="project-card__wrapper">
+        <div className={`project-card ${slug}`}>
+          <div className="project-card__content-wrapper">
+            <div className="project-card__content">
+              <small>{year}</small>
+              <h3 className="project-card__title">{heading}</h3>
+              <p>{children}</p>
 
-            <div className="tag__container">
-              <span className="tag">
-                <IconReact fill="currentColor" />
-                <span className="tag__title">React</span>
-              </span>
-              <span className="tag">
-                <IconSCSS />
-                <span className="tag__title">SCSS</span>
-              </span>
-              <span className="tag">
-                <IconFigma />
-                <span className="tag__title">Figma</span>
-              </span>
+              <div className="tag__container">
+                {tags.roles.map((tag, i) => (
+                  <Tag key={i} type="role" text={tag} />
+                ))}
+              </div>
+
+              <div className="tag__container">
+                {tags.tech.map((tag, i) => (
+                  <Tag key={i} text={tag} />
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="project-card__image">
-            <div className="project-card__img-outer-container">
-              <div className="project-card__img-inner-container">
-                <LazyImage
-                  alt="Norma: kansikuva"
-                  src="/assets/norma/norma-cover.png"
+            <div className="project-card__image-container">
+              <div className="project-card__image">
+                <Image
+                  alt={`${name}: kansikuva`}
+                  src={`/assets/${slug}/cover.png`}
                   width={1024}
                   height={576}
-                  quality={100}
+                  quality={90}
                   layout="responsive"
                 />
               </div>
@@ -58,5 +52,5 @@ export default function ProjectCard({ href }) {
         </div>
       </a>
     </Link>
-  );
+  )
 }

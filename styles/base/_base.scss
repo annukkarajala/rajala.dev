@@ -19,6 +19,7 @@ body {
 a {
   text-decoration: none;
   outline: none;
+  transition: all 0.2s ease;
 }
 
 figure {
@@ -30,17 +31,40 @@ figcaption {
   line-height: 1.4;
   margin: 1.2rem 0 0;
   text-align: center;
-  color: $grey-dark;
+  color: $l-gray;
 
   &::before {
     content: '↑ ';
   }
 }
 
+.h2-container {
+  h2 {
+    position: relative;
+
+    // line
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1.25rem;
+      left: -3rem;
+      width: 128px;
+      height: 3px;
+      border-radius: 6px;
+      background-color: $l-pink;
+    }
+  }
+
+  p {
+    margin: 2.5rem 0;
+    max-width: 525px;
+  }
+}
+
 .lazy {
   &__fadein {
     opacity: 0;
-    transition: opacity .25s;
+    transition: opacity 0.25s;
     border-radius: $border-radius;
   }
 
@@ -50,11 +74,7 @@ figcaption {
 }
 
 .skeleton {
-  background-color: $bg-dark2;
+  background-color: $l-lightgreen-var;
   border-radius: $border-radius;
-  transition: color .4s ease;
-}
-
-b {
-  font-weight: 800;
+  transition: color 0.4s ease;
 }
