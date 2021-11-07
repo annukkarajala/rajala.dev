@@ -29,9 +29,9 @@ export default function Norma() {
               <Image
                 alt="Norma: kansikuva"
                 src="/assets/norma/cover.png"
-                width={1120}
-                height={630}
-                quality={100}
+                width={1125}
+                height={633}
+                quality={90}
                 priority={true}
                 layout="responsive"
               />

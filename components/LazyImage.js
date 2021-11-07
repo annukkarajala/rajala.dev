@@ -10,6 +10,7 @@ export default function LazyImage(props) {
       <Image
         onLoad={() => setIsReady(true)}
         className={cx('lazy__fadein', { lazy__loaded: isReady })}
+        alt={props.alt}
         {...props}
       />
     </div>
