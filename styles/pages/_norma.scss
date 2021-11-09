@@ -30,7 +30,7 @@
     width: 100%;
     bottom: 0;
     height: 50%;
-    background-color: $l-lightgreen;
+    background-color: var(--bg-secondary);
   }
 }
 
@@ -45,28 +45,28 @@
   font-weight: 700;
   margin: 0 0 1rem;
   letter-spacing: -0.025em;
-  color: $l-gray;
+  color: var(--text);
 }
 
 .project-link {
   font-weight: 500;
-  color: $l-green;
+  color: var(--primary);
   text-decoration: underline;
 
   &:hover,
   &:focus {
-    color: $l-green-var;
+    color: var(--primary-var);
   }
 }
 
 .bg-alt {
-  background-color: $l-lightgreen;
+  background-color: var(--bg-secondary);
 }
 
 section.project-intro {
   margin-top: -2rem;
   padding-top: 0;
-  background-color: $l-lightgreen;
+  background-color: var(--bg-secondary);
 
   @include breakpoint(lg) {
     margin-top: 0;

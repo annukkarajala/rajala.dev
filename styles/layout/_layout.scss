@@ -117,7 +117,7 @@
     height: 27rem;
     border-radius: $border-radius;
     overflow: hidden;
-    background-color: $l-lightgreen-var;
+    background-color: var(--bg-secondary-var);
 
     @include breakpoint(sm) {
       width: 56rem;

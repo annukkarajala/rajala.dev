@@ -10,7 +10,7 @@
       [full-start] minmax(var(--padding), 1fr)
       [contain-start] minmax(0, $max-width) [contain-end]
       minmax(var(--padding), 1fr) [full-end];
-    background: $l-lightgreen;
+    background: var(--bg-secondary);
     padding: 2rem 0;
 
     > * {
@@ -52,7 +52,7 @@
 
       &:hover,
       &:focus {
-        color: $l-green;
+        color: var(--primary);
       }
     }
   }

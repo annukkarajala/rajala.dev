@@ -4,7 +4,7 @@
 
 .navbar {
   a {
-    color: $l-gray;
+    color: var(--text);
   }
 
   &__grid {
@@ -27,5 +27,11 @@
     @include breakpoint(sm) {
       --padding: 2rem;
     }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

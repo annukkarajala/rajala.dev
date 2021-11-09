@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: $l-green;
+    color: var(--primary);
 
     svg {
       flex-shrink: 0;
@@ -64,7 +64,7 @@
         width: 128px;
         height: 3px;
         border-radius: 6px;
-        background-color: $l-pink;
+        background-color: var(--secondary);
       }
 
       @include breakpoint(lg) {
@@ -119,7 +119,7 @@
       right: -3rem;
       bottom: 2rem;
       left: -1rem;
-      background-color: $l-lightgreen;
+      background-color: var(--bg-secondary);
       border-radius: $border-radius 0 0 $border-radius;
 
       @include breakpoint(lg) {
@@ -141,7 +141,7 @@
       position: absolute;
       width: 200px;
       height: 50px;
-      background: url('/assets/svgs/squares.svg') no-repeat;
+      background: var(--squares-url) no-repeat;
     }
 
     // cubes-top
@@ -223,7 +223,7 @@
       width: 100%;
       height: 100%;
       border-radius: $border-radius;
-      background-color: $l-lightgreen;
+      background-color: var(--bg-secondary);
 
       @include breakpoint(xl) {
         --offset: 1.5rem;
@@ -309,7 +309,7 @@
       left: -5rem;
       right: 1rem;
       top: 0;
-      background-color: $l-lightgreen;
+      background-color: var(--bg-secondary);
       border-radius: 0 $border-radius $border-radius 0;
 
       @include breakpoint(xl) {
@@ -330,7 +330,7 @@
       position: absolute;
       width: 200px;
       height: 50px;
-      background: url('/assets/svgs/squares.svg') no-repeat;
+      background: var(--squares-url) no-repeat;
     }
 
     // cubes-top
@@ -374,7 +374,7 @@
         width: 128px;
         height: 3px;
         border-radius: 6px;
-        background-color: $l-pink;
+        background-color: var(--secondary);
       }
 
       @include breakpoint(md) {
@@ -397,12 +397,12 @@
 
     a {
       font-weight: 500;
-      color: $l-green;
+      color: var(--primary);
       text-decoration: underline;
 
       &:hover,
       &:focus {
-        color: $l-green-var;
+        color: var(--primary-var);
       }
     }
   }
