@@ -2,61 +2,81 @@
 // Application-wide variables
 // -----------------------------------------------------------------------------
 
+// sizes
 $breakpoint-xs: 475px;
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
 $breakpoint-xxl: 1536px;
-
 $breakpoint-card: 928px;
-
 $max-width: 1125px;
 $border-radius: 4px;
 
-$txt-dark: #17141e;
-$txt-light: #f4f3f8;
+// colors: light theme
+:root {
+  --primary: #0d829c;
+  --primary-var: #0e7288;
+  --secondary: #fcc5e9;
+  --bg: #ffffff;
+  --bg-secondary: #e4f5f6;
+  --bg-secondary-var: #cdebed;
+  --headings: #142850;
+  --text: #546583;
 
-$bg-dark: #09080e;
-$bg-dark2: #1c1a22;
-$bg-accent: #131124;
+  --navbar: var(--text);
+  --squares-url: url('/assets/svgs/squares-light.svg');
 
-$bg-light: #fff;
-$bg-white: #fff;
+  --norma-card: #d1e6fa;
+  --norma-card-var: #abcced;
+  --norma-card-text: #223b54;
+  --norma-card-tag: var(--norma-card-var);
+  --norma-card-tag-text: var(--norma-card-text);
+  --norma-card-role: #f5faff;
+  --norma-card-role-text: var(--norma-card-text);
 
-$grey-dark: #798292;
-$grey-light: #9eaabe;
-$grey-lighter: #c3ccdb;
+  --wimmalab-card: #d1f7fa;
+  --wimmalab-card-var: #abe9ed;
+  --wimmalab-card-text: #225154;
+  --wimmalab-card-tag: var(--wimmalab-card-var);
+  --wimmalab-card-tag-text: var(--wimmalab-card-text);
+  --wimmalab-card-role: #f5feff;
+  --wimmalab-card-role-text: var(--wimmalab-card-text);
 
-$link-bg: #cde9ff;
+  --svg-fill: #fff;
+  --svg-outline: var(--headings);
+}
 
-$primary-yel: #f3e072;
-$primary-yel2: #f9eb9c;
+// colors: dark theme
+[data-theme='dark'] {
+  --primary: #4fd1c5;
+  --primary-var: #66e9dc;
+  --secondary: #f9eb9c;
+  --bg: #171b26;
+  --bg-secondary: #1e2633;
+  --bg-secondary-var: #222b3a;
+  --headings: #ffffff;
+  --text: #a0aec0;
 
-$primary-cya: #10d4b0;
+  --navbar: var(--headings);
+  --squares-url: url('/assets/svgs/squares-dark.svg');
 
-$secondary-vio: #8680a3;
-$secondary-vio2: #302a49;
+  --norma-card: #223b54;
+  --norma-card-var: #1e5388;
+  --norma-card-text: #ffffff;
+  --norma-card-tag: #bed9f4;
+  --norma-card-tag-text: var(--norma-card);
+  --norma-card-role: var(--norma-card-var);
+  --norma-card-role-text: var(--norma-card-text);
 
-$pri-norma: rgba(0, 60, 112, 1);
+  --wimmalab-card: #225154;
+  --wimmalab-card-var: #1d7f86;
+  --wimmalab-card-text: #ffffff;
+  --wimmalab-card-tag: #abe9ed;
+  --wimmalab-card-tag-text: var(--wimmalab-card);
+  --wimmalab-card-role: var(--wimmalab-card-var);
+  --wimmalab-card-role-text: var(--wimmalab-card-text);
 
-// new colors
-
-$l-green: #0d829c;
-$l-green-var: #0e7288;
-$l-pink: #fcc5e9;
-$l-white: #ffffff;
-$l-lightgreen: #e4f5f6;
-$l-lightgreen-var: #cdebed;
-$l-darkblue: #142850;
-$l-gray: #546583;
-
-$l-norma-card: #d1e6fa;
-$l-norma-card-var: #abcced;
-$l-norma-card-text: #223b54;
-$l-norma-card-light: #f5faff;
-
-$l-wimmalab-card: #d1f7fa;
-$l-wimmalab-card-var: #abe9ed;
-$l-wimmalab-card-text: #225154;
-$l-wimmalab-card-light: #f5feff;
+  --svg-fill: #fff;
+  --svg-outline: var(--bg);
+}

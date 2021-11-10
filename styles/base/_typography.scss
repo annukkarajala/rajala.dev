@@ -26,8 +26,8 @@ body {
   font-size: 100%;
   font-family: 'DM Sans', $fallback-stack, $emoji-stack;
   font-weight: 400;
-  color: $l-gray;
-  background-color: $bg-light;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 p {
@@ -46,7 +46,7 @@ h1 {
   font-weight: 700;
   line-height: 1.25;
   margin: 1.75rem 0;
-  color: $l-darkblue;
+  color: var(--headings);
 }
 
 h2 {
@@ -55,7 +55,7 @@ h2 {
   font-weight: 700;
   line-height: 1.25;
   margin: 1.75rem 0;
-  color: $l-darkblue;
+  color: var(--headings);
 }
 
 h3 {
@@ -64,7 +64,7 @@ h3 {
   font-weight: 700;
   line-height: 1.25;
   margin: 1rem 0;
-  color: $l-darkblue;
+  color: var(--headings);
 }
 
 small {
@@ -74,5 +74,5 @@ small {
 .big-p {
   font-size: clamp(1.2rem, 4vw, 1.313rem);
   line-height: 1.6;
-  color: $l-gray;
+  color: var(--text);
 }

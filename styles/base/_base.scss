@@ -31,7 +31,7 @@ figcaption {
   line-height: 1.4;
   margin: 1.2rem 0 0;
   text-align: center;
-  color: $l-gray;
+  color: var(--text);
 
   &::before {
     content: '↑ ';
@@ -51,7 +51,7 @@ figcaption {
       width: 128px;
       height: 3px;
       border-radius: 6px;
-      background-color: $l-pink;
+      background-color: var(--secondary);
     }
   }
 
@@ -74,7 +74,7 @@ figcaption {
 }
 
 .skeleton {
-  background-color: $l-lightgreen-var;
+  background-color: var(--bg-secondary-var);
   border-radius: $border-radius;
   transition: color 0.4s ease;
 }
