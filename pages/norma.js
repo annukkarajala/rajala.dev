@@ -68,10 +68,7 @@ export default function Norma() {
         </h2>
         <div>
           <p>
-            <CustomLink href="https://bonsky.com/" className="project-link">
-              Bonsky Digital Oy
-            </CustomLink>{' '}
-            (liittyi osaksi{' '}
+            Bonsky Digital Oy (liittyi osaksi{' '}
             <CustomLink href="https://www.vincit.fi/" className="project-link">
               Vincit Oyj
             </CustomLink>
