@@ -24,19 +24,24 @@ $border-radius: 4px;
   --headings: #142850;
   --text: #546583;
 
+  --navbar: var(--text);
   --squares-url: url('/assets/svgs/squares-light.svg');
 
   --norma-card: #d1e6fa;
   --norma-card-var: #abcced;
   --norma-card-text: #223b54;
-  --norma-card-role: var(--norma-card-text);
-  --norma-card-light: #f5faff;
+  --norma-card-tag: var(--norma-card-var);
+  --norma-card-tag-text: var(--norma-card-text);
+  --norma-card-role: #f5faff;
+  --norma-card-role-text: var(--norma-card-text);
 
   --wimmalab-card: #d1f7fa;
   --wimmalab-card-var: #abe9ed;
   --wimmalab-card-text: #225154;
-  --norma-card-role: var(--wimmalab-card-text);
-  --wimmalab-card-light: #f5feff;
+  --wimmalab-card-tag: var(--wimmalab-card-var);
+  --wimmalab-card-tag-text: var(--wimmalab-card-text);
+  --wimmalab-card-role: #f5feff;
+  --wimmalab-card-role-text: var(--wimmalab-card-text);
 
   --svg-fill: #fff;
   --svg-outline: var(--headings);
@@ -53,19 +58,24 @@ $border-radius: 4px;
   --headings: #ffffff;
   --text: #a0aec0;
 
+  --navbar: var(--headings);
   --squares-url: url('/assets/svgs/squares-dark.svg');
 
   --norma-card: #223b54;
   --norma-card-var: #1e5388;
   --norma-card-text: #ffffff;
-  --norma-card-role: var(--norma-card);
-  --norma-card-light: #bed9f4;
+  --norma-card-tag: #bed9f4;
+  --norma-card-tag-text: var(--norma-card);
+  --norma-card-role: var(--norma-card-var);
+  --norma-card-role-text: var(--norma-card-text);
 
   --wimmalab-card: #225154;
   --wimmalab-card-var: #1d7f86;
   --wimmalab-card-text: #ffffff;
-  --norma-card-role: var(--wimmalab-card);
-  --wimmalab-card-light: #abe9ed;
+  --wimmalab-card-tag: #abe9ed;
+  --wimmalab-card-tag-text: var(--wimmalab-card);
+  --wimmalab-card-role: var(--wimmalab-card-var);
+  --wimmalab-card-role-text: var(--wimmalab-card-text);
 
   --svg-fill: #fff;
   --svg-outline: var(--bg);

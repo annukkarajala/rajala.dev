@@ -32,7 +32,7 @@
       background-color: var(--primary-var);
       transform: translateZ(0) scale(1.025);
     }
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px var(--secondary);
     }
   }
@@ -50,8 +50,37 @@
       background-color: var(--bg-secondary-var);
       transform: translateZ(0) scale(1.025);
     }
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px var(--secondary);
     }
+  }
+}
+
+.theme-switcher {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  border-radius: $border-radius;
+  white-space: nowrap;
+  cursor: pointer;
+  margin: 0;
+  background-color: var(--bg-secondary);
+
+  &__wrapper {
+    height: 36px;
+    width: 36px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--bg-secondary-var);
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--secondary);
   }
 }

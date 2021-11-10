@@ -159,11 +159,12 @@
   }
 
   .tag {
-    background-color: var(--norma-card-var);
+    background-color: var(--norma-card-tag);
+    color: var(--norma-card-tag-text);
 
     &--role {
-      color: var(--norma-card-role);
-      background-color: var(--norma-card-light);
+      background-color: var(--norma-card-role);
+      color: var(--norma-card-role-text);
     }
   }
 }
@@ -185,11 +186,12 @@
   }
 
   .tag {
-    background-color: var(--wimmalab-card-var);
+    background-color: var(--wimmalab-card-tag);
+    color: var(--wimmalab-card-tag-text);
 
     &--role {
-      color: var(--norma-card-role);
-      background-color: var(--wimmalab-card-light);
+      background-color: var(--wimmalab-card-role);
+      color: var(--wimmalab-card-role-text);
     }
   }
 }
