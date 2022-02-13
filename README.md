@@ -1,6 +1,8 @@
-# [Rajala.dev](https://rajala.dev)
+# [rajala.dev](https://rajala.dev)
 
-> Personal portfolio. Built with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com). 🚀
+> Personal portfolio. Built with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com).
+
+![cover](https://user-images.githubusercontent.com/42697907/153762700-cd038065-ddd5-4110-8795-94ab5d100423.png)
 
 
 ## Setup
