@@ -140,58 +140,29 @@
   }
 }
 
-// Color variations
-
-.project-card.norma {
-  background-color: var(--norma-card);
-  border: 1px solid var(--norma-card-var);
+.project-card {
+  background-color: var(--card);
+  border: 1px solid var(--card-var);
 
   .project-card {
     &__image-container {
-      background-color: var(--norma-card-var);
-      @include card-image-shadow(var(--norma-card-var));
+      background-color: var(--card-var);
+      @include card-image-shadow(var(--card-var));
     }
 
     &__content,
     &__title {
-      color: var(--norma-card-text);
+      color: var(--card-text);
     }
   }
 
   .tag {
-    background-color: var(--norma-card-tag);
-    color: var(--norma-card-tag-text);
+    background-color: var(--card-tag);
+    color: var(--card-tag-text);
 
     &--role {
-      background-color: var(--norma-card-role);
-      color: var(--norma-card-role-text);
-    }
-  }
-}
-
-.project-card.wimmalab {
-  background-color: var(--wimmalab-card);
-  border: 1px solid var(--wimmalab-card-var);
-
-  .project-card {
-    &__image-container {
-      background-color: var(--wimmalab-card-var);
-      @include card-image-shadow(var(--wimmalab-card-var));
-    }
-
-    &__content,
-    &__title {
-      color: var(--wimmalab-card-text);
-    }
-  }
-
-  .tag {
-    background-color: var(--wimmalab-card-tag);
-    color: var(--wimmalab-card-tag-text);
-
-    &--role {
-      background-color: var(--wimmalab-card-role);
-      color: var(--wimmalab-card-role-text);
+      background-color: var(--card-role);
+      color: var(--card-role-text);
     }
   }
 }
