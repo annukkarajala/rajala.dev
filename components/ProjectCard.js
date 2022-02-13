@@ -16,7 +16,18 @@ export default function ProjectCard({
   return (
     <Link href={href}>
       <a className="project-card__wrapper">
-        <div className={`project-card ${slug}`}>
+        <div
+            className='project-card'
+            style={{
+            '--card': `var(--${slug}-card)`,
+            '--card-var': `var(--${slug}-card-var)`,
+            '--card-text': `var(--${slug}-card-text)`,
+            '--card-tag': `var(--${slug}-card-tag)`,
+            '--card-tag-text': `var(--${slug}-card-tag-text)`,
+            '--card-role': `var(--${slug}-card-role)`,
+            '--card-role-text': `var(--${slug}-card-role-text)`,
+            }}
+        >
           <div className="project-card__content-wrapper">
             <div className="project-card__content">
               <small>{year}</small>

@@ -13,6 +13,28 @@ import SvgContactLetter from '@/svgs/illustr/contact-letter.svg'
 
 const projects = [
   {
+    name: 'Digitemia',
+    slug: 'digitemia',
+    year: '2022 — jatkuu',
+    title: 'automatisoitu ryhmätoiminnan alusta',
+    tags: {
+      roles: ['Frontend-kehitys', 'UI-suunnittelu'],
+      tech: ['Vue 3', 'TypeScript', 'Vite', 'Naive UI'],
+    },
+    desc: 'Digitemia tekee etäohjatun ryhmätoiminnan helpoksi sekä osallistujille että järjestäjille. Ryhmille luodaan automaattisesti omat Discord-kanavat, ja tapaamisten ajankohdat näkyvät osallistujien tapahtumakalenterissa.',
+  },
+  {
+    name: 'Bittiliiga',
+    slug: 'bittiliiga',
+    year: 2021,
+    title: 'nuorisotoimintaa eSports-harrastuksen kautta',
+    tags: {
+      roles: ['Frontend-kehitys', 'UI-suunnittelu'],
+      tech: ['Vue', 'Nuxt', 'FeathersJS', 'Vuetify'],
+    },
+    desc: 'Bittiliiga on joukkuepelaamisen eSports-harrastajaliiga nuorille ja nuorille aikuisille, jossa turnauksiin voi osallistua taitotasosta riippumatta. Uudistin alustan visuaalista ilmettä ja laajensin sen toiminnallisuutta niin pelaaja- kuin adminpuolella.',
+  },
+  {
     name: 'Norma',
     slug: 'norma',
     year: 2021,
@@ -22,17 +44,6 @@ const projects = [
       tech: ['React', 'SCSS', 'Figma'],
     },
     desc: 'Bonskyltä saadussa toimeksiannossa haluttiin käyttöliittymä, jossa käyttäjä voi selata sääntöjä ja tehdä niihin muutoksia. Muutosten versiohistoria tuli säilyttää. Lopputuloksena syntyi työkalu, jota voivat käyttää sekä asiakkaat että yritys itse.',
-  },
-  {
-    name: 'WIMMA Lab',
-    slug: 'wimmalab',
-    year: 2021,
-    title: 'nettisivujen uudistus Next.js:llä',
-    tags: {
-      roles: ['Frontend-kehitys', 'UI-suunnittelu'],
-      tech: ['React', 'Next.js', 'SCSS', 'Figma', 'Illustrator'],
-    },
-    desc: 'Toimin tiiminvetäjänä WIMMA Lab -konseptin brändin sekä nettisivujen uudistuksessa. Next.js:llä rakennetulle sivustolle toteutettiin lokalisaatio, ja oppaat-osion sisällön päivittäminen tapahtuu kätevästi Markdown-tiedostoja hyödyntämällä.',
   },
 ]
 

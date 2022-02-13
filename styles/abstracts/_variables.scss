@@ -26,22 +26,33 @@ $border-radius: 4px;
 
   --navbar: var(--text);
   --squares-url: url('/assets/svgs/squares-light.svg');
+  
+  // Digitemia
+  --digitemia-card: #d6d2f2;
+  --digitemia-card-var: #b9b0ee;
+  --digitemia-card-text: #383a59;
+  --digitemia-card-tag: var(--digitemia-card-var);
+  --digitemia-card-tag-text: var(--digitemia-card-text);
+  --digitemia-card-role: #f7f5ff;
+  --digitemia-card-role-text: var(--digitemia-card-text);
 
+  // Bittiliiga
+  --bittiliiga-card: #f2d2d3;
+  --bittiliiga-card-var: #ecb2b4;
+  --bittiliiga-card-text: #493131;
+  --bittiliiga-card-tag: var(--bittiliiga-card-var);
+  --bittiliiga-card-tag-text: var(--bittiliiga-card-text);
+  --bittiliiga-card-role: #fff5f9;
+  --bittiliiga-card-role-text: var(--bittiliiga-card-text);
+
+  // Norma
   --norma-card: #d1e6fa;
   --norma-card-var: #abcced;
-  --norma-card-text: #223b54;
+  --norma-card-text: #284561;
   --norma-card-tag: var(--norma-card-var);
   --norma-card-tag-text: var(--norma-card-text);
   --norma-card-role: #f5faff;
   --norma-card-role-text: var(--norma-card-text);
-
-  --wimmalab-card: #d1f7fa;
-  --wimmalab-card-var: #abe9ed;
-  --wimmalab-card-text: #225154;
-  --wimmalab-card-tag: var(--wimmalab-card-var);
-  --wimmalab-card-tag-text: var(--wimmalab-card-text);
-  --wimmalab-card-role: #f5feff;
-  --wimmalab-card-role-text: var(--wimmalab-card-text);
 
   --svg-fill: #fff;
   --svg-outline: var(--headings);
@@ -61,6 +72,25 @@ $border-radius: 4px;
   --navbar: var(--headings);
   --squares-url: url('/assets/svgs/squares-dark.svg');
 
+  // Digitemia
+  --digitemia-card: #335;
+  --digitemia-card-var: #565684;
+  --digitemia-card-text: #ffffff;
+  --digitemia-card-tag: #c3c3ec;
+  --digitemia-card-tag-text: var(--digitemia-card);
+  --digitemia-card-role: var(--digitemia-card-var);
+  --digitemia-card-role-text: var(--digitemia-card-text);
+
+  // Bittiliiga
+  --bittiliiga-card: #292d3c;
+  --bittiliiga-card-var: #3a4158;
+  --bittiliiga-card-text: #ffffff;
+  --bittiliiga-card-tag: #b4bfd5;
+  --bittiliiga-card-tag-text: var(--bittiliiga-card);
+  --bittiliiga-card-role: var(--bittiliiga-card-var);
+  --bittiliiga-card-role-text: var(--bittiliiga-card-text);
+
+  // Norma
   --norma-card: #223b54;
   --norma-card-var: #1e5388;
   --norma-card-text: #ffffff;
@@ -68,14 +98,6 @@ $border-radius: 4px;
   --norma-card-tag-text: var(--norma-card);
   --norma-card-role: var(--norma-card-var);
   --norma-card-role-text: var(--norma-card-text);
-
-  --wimmalab-card: #225154;
-  --wimmalab-card-var: #1d7f86;
-  --wimmalab-card-text: #ffffff;
-  --wimmalab-card-tag: #abe9ed;
-  --wimmalab-card-tag-text: var(--wimmalab-card);
-  --wimmalab-card-role: var(--wimmalab-card-var);
-  --wimmalab-card-role-text: var(--wimmalab-card-text);
 
   --svg-fill: #fff;
   --svg-outline: var(--bg);
