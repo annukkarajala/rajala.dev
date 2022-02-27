@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border-radius: $border-radius;
     padding: var(--padding) var(--padding) 0 var(--padding);
 
     @include breakpoint(card) {
@@ -120,26 +121,29 @@
   &__wrapper {
     backface-visibility: hidden;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: $border-radius;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translateZ(0) scale(1.012);
-    }
-  }
 
-  &:hover {
-    &::after {
-      transform: scale(0.988);
-    }
-  }
-
-  @include breakpoint(card) {
-    &:hover {
-      .project-card__image-container {
-        transform: translateY(-1rem);
+      .project-card::after {
+        transform: scale(0.988);
       }
+
+      @include breakpoint(card) {
+        .project-card__image-container {
+          transform: translateY(-1rem);
+        }
+      }
+    }
+    &:focus-visible {
+      box-shadow: 0 0 0 2px var(--secondary);
     }
   }
 }
+
+// Colors
 
 .project-card {
   background-color: var(--card);

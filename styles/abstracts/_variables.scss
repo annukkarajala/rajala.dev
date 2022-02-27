@@ -15,16 +15,16 @@ $border-radius: 4px;
 
 // colors: light theme
 :root {
-  --primary: #0d829c;
-  --primary-var: #0e7288;
-  --secondary: #fcc5e9;
-  --bg: #ffffff;
-  --bg-secondary: #e4f5f6;
-  --bg-secondary-var: #cdebed;
+  --primary: #006E92;
+  --primary-var: #046886;
+  --secondary: #e476bf;
+  --bg: #fff;
+  --bg-secondary: #E4F2F6;
+  --bg-secondary-var: #d5e8ec;
   --headings: #142850;
-  --text: #546583;
+  --text: #496586;
 
-  --navbar: var(--text);
+  --navbar: var(--primary);
   --squares-url: url('/assets/svgs/squares-light.svg');
   
   // Digitemia

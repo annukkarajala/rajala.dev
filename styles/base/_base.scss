@@ -78,3 +78,13 @@ figcaption {
   border-radius: $border-radius;
   transition: color 0.4s ease;
 }
+
+a[href^='mailto:'],
+.internal-link,
+.external-link {
+  border-radius: $border-radius;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--secondary);
+  }
+}

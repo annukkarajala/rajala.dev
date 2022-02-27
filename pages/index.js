@@ -58,7 +58,7 @@ export default function Index() {
           <div className="hero__flex">
             <div>
               <div className="hero__greeting">
-                <SvgHandWave width="40" height="42" />
+                <SvgHandWave width="40" height="42" aria-hidden="true" />
                 <p>
                   Moikka!
                   <br />
@@ -93,7 +93,7 @@ export default function Index() {
 
             <div className="hero__image">
               <div className="hero__svg-wrapper">
-                <SvgDevelopment />
+                <SvgDevelopment aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -129,14 +129,14 @@ export default function Index() {
             <h2>Lisää minusta</h2>
             <p className="big-p">
               Elämäntapakoodaaja, joka uppoutuu mielellään myös ruoanlaittoon,
-              liikuntaan tai viherkasvien hoitoon.
+              liikuntaan, pelaamiseen tai viherkasvien hoitoon.
             </p>
           </div>
           <div className="about-me__container">
             <div className="about-me__image-container">
               <Image
                 src="/assets/profile.png"
-                alt="Annukka Rajala"
+                alt="Profiili: Annukka Rajala"
                 width={445}
                 height={445}
                 className="about-me__image"
@@ -159,7 +159,14 @@ export default function Index() {
                 <TechnologyList
                   title="JavaScript"
                   icon="js"
-                  items={['Vue', 'Nuxt', 'React', 'Next.js', 'React Native']}
+                  items={[
+                    'TypeScript',
+                    'Vue',
+                    'Nuxt',
+                    'React',
+                    'Next.js',
+                    'React Native',
+                  ]}
                 />
                 <TechnologyList
                   title="HTML/CSS"
@@ -181,7 +188,7 @@ export default function Index() {
           <div className="contact__flex">
             <div className="contact__image">
               <div className="contact__svg-wrapper">
-                <SvgContactLetter />
+                <SvgContactLetter aria-hidden="true" />
               </div>
             </div>
             <div className="contact__content">

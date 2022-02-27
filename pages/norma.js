@@ -128,7 +128,15 @@ export default function Norma() {
                   layout="responsive"
                 />
               </a>
-              <figcaption>Figma v2.0: käyttöliittymä</figcaption>
+              <figcaption>
+                Figma v2.0: käyttöliittymä. Loin perusrakenteesta myös{' '}
+                <CustomLink
+                  href="https://codepen.io/arajala/pen/YzGRyvQ"
+                  className="project-link">
+                  demon
+                </CustomLink>
+                , jonka pohjalta React-kehitys oli helppo aloittaa.
+              </figcaption>
             </figure>
           </div>
         </div>
