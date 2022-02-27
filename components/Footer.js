@@ -10,18 +10,22 @@ const links = [
   {
     url: 'https://github.com/annukkarajala',
     icon: SvgGitHub,
+    name: 'GitHub',
   },
   {
     url: 'https://www.linkedin.com/in/annukkarajala/',
     icon: SvgLinkedIn,
+    name: 'LinkedIn',
   },
   {
     url: 'https://codepen.io/arajala',
     icon: SvgDribbble,
+    name: 'Dribbble',
   },
   {
     url: 'https://dribbble.com/arajala',
     icon: SvgCodePen,
+    name: 'CodePen',
   },
 ]
 
@@ -40,8 +44,18 @@ export default function Footer() {
         </div>
         <div className="footer__icons">
           {links.map((link, i) => (
-            <CustomLink href={link.url} key={i}>
-              <SvgIcon component={link.icon} width="32" height="32" />
+            <CustomLink
+              href={link.url}
+              key={i}
+              ariaLabel={link.name}
+              className="icon-link">
+              <SvgIcon
+                component={link.icon}
+                width="32"
+                height="32"
+                aria-hidden="true"
+                focusable="false"
+              />
             </CustomLink>
           ))}
         </div>

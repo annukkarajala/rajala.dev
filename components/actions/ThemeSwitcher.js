@@ -22,11 +22,12 @@ export default function ThemeSwitcher() {
     <div className="theme-switcher__wrapper">
       {mounted && (
         <button
+          aria-label={`Vaihda ${inactiveTheme === 'light' ? 'vaalea' : 'tumma'} teema`}
           className="theme-switcher"
           onClick={() =>
             setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
           }>
-          <Icon width="24" height="24" />
+          <Icon width="24" height="24" aria-hidden="true" focusable="false" />
         </button>
       )}
     </div>

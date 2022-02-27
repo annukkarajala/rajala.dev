@@ -58,7 +58,7 @@ export default function Index() {
           <div className="hero__flex">
             <div>
               <div className="hero__greeting">
-                <SvgHandWave width="40" height="42" />
+                <SvgHandWave width="40" height="42" aria-hidden="true" />
                 <p>
                   Moikka!
                   <br />
@@ -93,7 +93,7 @@ export default function Index() {
 
             <div className="hero__image">
               <div className="hero__svg-wrapper">
-                <SvgDevelopment />
+                <SvgDevelopment aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -188,7 +188,7 @@ export default function Index() {
           <div className="contact__flex">
             <div className="contact__image">
               <div className="contact__svg-wrapper">
-                <SvgContactLetter />
+                <SvgContactLetter aria-hidden="true" />
               </div>
             </div>
             <div className="contact__content">

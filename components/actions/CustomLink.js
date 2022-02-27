@@ -3,14 +3,22 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 // Render Link differently based on if it's internal/external
-export default function CustomLink({ href, locale, className = '', children }) {
+export default function CustomLink({ href, locale, className = '', ariaLabel, children }) {
   const router = useRouter()
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
+  const baseClass = isInternalLink ? 'internal-link' : 'external-link'
+  const linkProps = {
+    className: cx(baseClass, className),
+  }
 
+  if (ariaLabel) {
+    linkProps['aria-label'] = ariaLabel
+  }
+  
   if (isInternalLink) {
     return (
       <Link href={href} locale={locale ? locale : router.locale}>
-        <a className={cx('internal-link', className)}>{children}</a>
+        <a {...linkProps}>{children}</a>
       </Link>
     )
   }
@@ -20,7 +28,7 @@ export default function CustomLink({ href, locale, className = '', children }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={cx('external-link', className)}>
+      {...linkProps}>
       {children}
     </a>
   )

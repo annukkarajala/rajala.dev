@@ -130,7 +130,9 @@ export default function Norma() {
               </a>
               <figcaption>
                 Figma v2.0: käyttöliittymä. Loin perusrakenteesta myös{' '}
-                <CustomLink href="https://codepen.io/arajala/pen/YzGRyvQ" className='project-link'>
+                <CustomLink
+                  href="https://codepen.io/arajala/pen/YzGRyvQ"
+                  className="project-link">
                   demon
                 </CustomLink>
                 , jonka pohjalta React-kehitys oli helppo aloittaa.

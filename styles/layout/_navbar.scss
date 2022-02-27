@@ -3,10 +3,6 @@
 // -----------------------------------------------------------------------------
 
 .navbar {
-  a {
-    color: var(--text);
-  }
-
   &__grid {
     --padding: 1rem;
     display: grid;
@@ -33,5 +29,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__logo {
+    color: var(--navbar);
+    padding: 0.3rem 0.25rem 0.15rem 0.35rem;
+    margin-left: -0.35rem;
+    border-radius: $border-radius;
+
+    &:hover,
+    &:focus {
+        color: var(--primary-var);
+    }
+    &:focus-visible {
+        box-shadow: 0 0 0 2px var(--secondary);
+    }
   }
 }
