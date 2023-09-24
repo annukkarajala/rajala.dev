@@ -1,7 +1,11 @@
 import { format, parseISO } from 'date-fns'
 import { fi } from 'date-fns/locale'
 
-export default function Date({ dateString }) {
+interface DateProps {
+  dateString: string
+}
+
+export default function Date({ dateString }: DateProps) {
   const date = parseISO(dateString)
   return (
     <time dateTime={dateString}>

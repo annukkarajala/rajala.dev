@@ -1,9 +1,9 @@
+import * as React from 'react'
 import cx from 'classnames'
-import Image from 'next/image'
-import { useState } from 'react'
+import Image, { ImageProps } from 'next/image'
 
-export default function LazyImage(props) {
-  const [isReady, setIsReady] = useState(false)
+export default function LazyImage(props: ImageProps) {
+  const [isReady, setIsReady] = React.useState(false)
 
   return (
     <div className="skeleton">

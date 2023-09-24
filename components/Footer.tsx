@@ -1,12 +1,19 @@
 import CustomLink from '@/components/actions/CustomLink'
 
+import SvgCodePen from '@/svgs/icons/codepen.svg'
 import SvgCopyright from '@/svgs/icons/copyright.svg'
+import SvgDribbble from '@/svgs/icons/dribbble.svg'
 import SvgGitHub from '@/svgs/icons/github.svg'
 import SvgLinkedIn from '@/svgs/icons/linkedin.svg'
-import SvgDribbble from '@/svgs/icons/dribbble.svg'
-import SvgCodePen from '@/svgs/icons/codepen.svg'
+import { SvgIcon } from '@/types/svg.types'
 
-const links = [
+interface FooterLink {
+  url: string
+  icon: SvgIcon
+  name: string
+}
+
+const footerLinks: FooterLink[] = [
   {
     url: 'https://github.com/annukkarajala',
     icon: SvgGitHub,
@@ -29,11 +36,6 @@ const links = [
   },
 ]
 
-function SvgIcon({ component, ...props }) {
-  const SvgIcon = component
-  return <SvgIcon {...props} />
-}
-
 export default function Footer() {
   return (
     <footer className="footer__grid">
@@ -43,14 +45,13 @@ export default function Footer() {
           <p>{new Date().getFullYear()} — Rajala.dev</p>
         </div>
         <div className="footer__icons">
-          {links.map((link, i) => (
+          {footerLinks.map(({ url, icon: Icon, name }, i) => (
             <CustomLink
-              href={link.url}
               key={i}
-              ariaLabel={link.name}
+              href={url}
+              ariaLabel={name}
               className="icon-link">
-              <SvgIcon
-                component={link.icon}
+              <Icon
                 width="32"
                 height="32"
                 aria-hidden="true"
