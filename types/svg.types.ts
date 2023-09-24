@@ -1,1 +1,1 @@
-export type SvgIcon = React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+export type SvgIcon = React.FunctionComponent<React.SVGProps<SVGSVGElement>>

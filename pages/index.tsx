@@ -1,16 +1,16 @@
 import * as React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Layout, { siteTitle } from '@/components/Layout'
 
 import Button from '@/components/actions/Button'
 import CustomLink from '@/components/actions/CustomLink'
+import Layout, { siteTitle } from '@/components/Layout'
 import ProjectCard from '@/components/ProjectCard'
 import TechnologyList from '@/components/TechnologyList'
 
 import SvgHandWave from '@/svgs/handwave.svg'
-import SvgDevelopment from '@/svgs/illustr/development.svg'
 import SvgContactLetter from '@/svgs/illustr/contact-letter.svg'
+import SvgDevelopment from '@/svgs/illustr/development.svg'
 
 const projects = [
   {
@@ -78,8 +78,12 @@ export default function Index() {
                   JavaScript-sovelluskehykset ja CSS.
                 </p>
                 <div className="hero__actions">
-                  <Button href="#about-me" type="primary">Lisää minusta</Button>
-                  <Button href="#contact" type="secondary">Ota yhteyttä</Button>
+                  <Button href="#about-me" type="primary">
+                    Lisää minusta
+                  </Button>
+                  <Button href="#contact" type="secondary">
+                    Ota yhteyttä
+                  </Button>
                 </div>
               </div>
             </div>

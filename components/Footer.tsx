@@ -1,16 +1,16 @@
 import CustomLink from '@/components/actions/CustomLink'
 
+import SvgCodePen from '@/svgs/icons/codepen.svg'
 import SvgCopyright from '@/svgs/icons/copyright.svg'
+import SvgDribbble from '@/svgs/icons/dribbble.svg'
 import SvgGitHub from '@/svgs/icons/github.svg'
 import SvgLinkedIn from '@/svgs/icons/linkedin.svg'
-import SvgDribbble from '@/svgs/icons/dribbble.svg'
-import SvgCodePen from '@/svgs/icons/codepen.svg'
 import { SvgIcon } from '@/types/svg.types'
 
 interface FooterLink {
-   url: string;
-   icon: SvgIcon;
-   name: string;
+  url: string
+  icon: SvgIcon
+  name: string
 }
 
 const footerLinks: FooterLink[] = [

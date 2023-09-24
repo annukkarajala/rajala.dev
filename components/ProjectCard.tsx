@@ -1,17 +1,17 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 import Tag from '@/components/Tag'
 
 interface ProjectCardProps {
-   name: string;
-   slug: string;
-   year: string | number;
-   title: string;
-   tags: {
-      roles: string[];
-      tech: string[];
-   };
-   description: string,
+  name: string
+  slug: string
+  year: string | number
+  title: string
+  tags: {
+    roles: string[]
+    tech: string[]
+  }
+  description: string
 }
 
 export default function ProjectCard({
@@ -24,23 +24,20 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const href = `/${slug}`
   const heading = `${name} — ${title}`
-   const style: React.CSSProperties & Record<string, string> = {
-      '--card': `var(--${slug}-card)`,
-      '--card-var': `var(--${slug}-card-var)`,
-      '--card-text': `var(--${slug}-card-text)`,
-      '--card-tag': `var(--${slug}-card-tag)`,
-      '--card-tag-text': `var(--${slug}-card-tag-text)`,
-      '--card-role': `var(--${slug}-card-role)`,
-      '--card-role-text': `var(--${slug}-card-role-text)`
-   }
+  const style: React.CSSProperties & Record<string, string> = {
+    '--card': `var(--${slug}-card)`,
+    '--card-var': `var(--${slug}-card-var)`,
+    '--card-text': `var(--${slug}-card-text)`,
+    '--card-tag': `var(--${slug}-card-tag)`,
+    '--card-tag-text': `var(--${slug}-card-tag-text)`,
+    '--card-role': `var(--${slug}-card-role)`,
+    '--card-role-text': `var(--${slug}-card-role-text)`,
+  }
 
   return (
     <Link href={href}>
       <a className="project-card__wrapper">
-        <div
-            className='project-card'
-            style={style}
-        >
+        <div className="project-card" style={style}>
           <div className="project-card__content-wrapper">
             <div className="project-card__content">
               <small>{year}</small>

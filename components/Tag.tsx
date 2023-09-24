@@ -1,10 +1,10 @@
 import cx from 'classnames'
 
-type TagType = 'role' | 'default';
+type TagType = 'role' | 'default'
 
 interface TagProps {
-   type?: TagType;
-   text: string;
+  type?: TagType
+  text: string
 }
 
 export default function Tag({ type, text }: TagProps) {

@@ -23,7 +23,9 @@ export default function ThemeSwitcher() {
     <div className="theme-switcher__wrapper">
       {mounted && (
         <button
-          aria-label={`Vaihda ${inactiveTheme === 'light' ? 'vaalea' : 'tumma'} teema`}
+          aria-label={`Vaihda ${
+            inactiveTheme === 'light' ? 'vaalea' : 'tumma'
+          } teema`}
           className="theme-switcher"
           onClick={() =>
             setTheme(resolvedTheme === 'light' ? 'dark' : 'light')

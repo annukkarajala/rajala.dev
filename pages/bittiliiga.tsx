@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import Layout, { siteTitle } from '@/components/Layout'
 import CustomLink from '@/components/actions/CustomLink'
+import Layout, { siteTitle } from '@/components/Layout'
 import LazyImage from '@/components/LazyImage'
 
 import SvgContactLetter from '@/svgs/illustr/contact-letter.svg'

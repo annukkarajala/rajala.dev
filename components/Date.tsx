@@ -2,7 +2,7 @@ import { format, parseISO } from 'date-fns'
 import { fi } from 'date-fns/locale'
 
 interface DateProps {
-   dateString: string;
+  dateString: string
 }
 
 export default function Date({ dateString }: DateProps) {
