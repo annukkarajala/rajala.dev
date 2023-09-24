@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
+    "@types/node": "20.6.4",
+    "@types/react": "18.2.22",
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.3.4",
     "eslint-config-prettier": "^9.0.0"

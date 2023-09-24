@@ -1,8 +1,8 @@
 import cx from 'classnames'
-import Image from 'next/image'
+import Image, { ImageProps } from 'next/image'
 import { useState } from 'react'
 
-export default function LazyImage(props) {
+export default function LazyImage(props: ImageProps) {
   const [isReady, setIsReady] = useState(false)
 
   return (

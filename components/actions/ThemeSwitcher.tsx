@@ -1,22 +1,23 @@
-import { useState, useEffect } from 'react'
+import * as React from 'react'
 import { useTheme } from 'next-themes'
 import svgDark from '@/svgs/icons/theme-dark.svg'
 import svgLight from '@/svgs/icons/theme-light.svg'
+import { SvgIcon } from '@/types/svg.types'
 
-const iconTypes = {
+const icons: Record<'light' | 'dark', SvgIcon> = {
   light: svgLight,
   dark: svgDark,
 }
 
 export default function ThemeSwitcher() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = React.useState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
-  // get access to theme after mounting
-  useEffect(() => setMounted(true), [])
+  // Get access to theme after mounting
+  React.useEffect(() => setMounted(true), [])
 
   const inactiveTheme = resolvedTheme === 'light' ? 'dark' : 'light'
-  const Icon = iconTypes[inactiveTheme]
+  const Icon = icons[inactiveTheme]
 
   return (
     <div className="theme-switcher__wrapper">

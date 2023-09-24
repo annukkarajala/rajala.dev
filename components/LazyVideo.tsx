@@ -2,7 +2,12 @@ import cx from 'classnames'
 import { useState } from 'react'
 import ReactPlayer from 'react-player/file'
 
-export default function LazyVideo({ url, caption }) {
+interface LazyVideoProps {
+   url: string;
+   caption: string;
+}
+
+export default function LazyVideo({ url, caption }: LazyVideoProps) {
   const [isReady, setIsReady] = useState(false)
 
   return (

@@ -1,3 +1,4 @@
+import * as React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout, { siteTitle } from '@/components/Layout'
@@ -77,16 +78,8 @@ export default function Index() {
                   JavaScript-sovelluskehykset ja CSS.
                 </p>
                 <div className="hero__actions">
-                  <Button
-                    href="#about-me"
-                    name="Lisää minusta"
-                    type="primary"
-                  />
-                  <Button
-                    href="#contact"
-                    name="Ota yhteyttä"
-                    type="secondary"
-                  />
+                  <Button href="#about-me" type="primary">Lisää minusta</Button>
+                  <Button href="#contact" type="secondary">Ota yhteyttä</Button>
                 </div>
               </div>
             </div>
@@ -116,9 +109,9 @@ export default function Index() {
                 slug={project.slug}
                 year={project.year}
                 title={project.title}
-                tags={project.tags}>
-                {project.desc}
-              </ProjectCard>
+                tags={project.tags}
+                description={project.desc}
+              />
             ))}
           </div>
         </div>
